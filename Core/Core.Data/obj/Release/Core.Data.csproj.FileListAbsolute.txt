@@ -1,0 +1,87 @@
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.dll.config
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.pdb
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.SqlServer.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.xml
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CW\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+D:\CW\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+D:\CW\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.dll
+D:\CW\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.pdb
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Z.EntityFramework.Extensions.dll
+D:\CW\CredinetWeb\Core\Core.Data\bin\Release\Z.EntityFramework.Extensions.xml
+D:\CW\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+F:\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.dll.config
+F:\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\Core.Data.pdb
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.SqlServer.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\Z.EntityFramework.Extensions.dll
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.xml
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+F:\CredinetWeb\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+F:\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+F:\CredinetWeb\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\CredinetWeb\Core\Core.Data\bin\Release\Z.EntityFramework.Extensions.xml
+F:\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+F:\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+F:\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.dll
+F:\CredinetWeb\Core\Core.Data\obj\Release\Core.Data.pdb
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Core.Data.dll.config
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Core.Data.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Core.Data.pdb
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.SqlServer.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.xml
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+F:\Proyectos Covid\MicroServices\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Proyectos Covid\MicroServices\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+F:\Proyectos Covid\MicroServices\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+F:\Proyectos Covid\MicroServices\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+F:\Proyectos Covid\MicroServices\Core\Core.Data\obj\Release\Core.Data.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Data\obj\Release\Core.Data.pdb
+F:\TeleCaja\Core\Core.Data\bin\Release\Core.Data.dll.config
+F:\TeleCaja\Core\Core.Data\bin\Release\Core.Data.dll
+F:\TeleCaja\Core\Core.Data\bin\Release\Core.Data.pdb
+F:\TeleCaja\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+F:\TeleCaja\Core\Core.Data\bin\Release\EntityFramework.xml
+F:\TeleCaja\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+F:\TeleCaja\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+F:\TeleCaja\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+F:\TeleCaja\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\TeleCaja\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+F:\TeleCaja\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+F:\TeleCaja\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+F:\TeleCaja\Core\Core.Data\obj\Release\Core.Data.dll
+F:\TeleCaja\Core\Core.Data\obj\Release\Core.Data.pdb
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\Core.Data.dll.config
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\Core.Data.dll
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\Core.Data.pdb
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\EntityFramework.xml
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\TeleCajaBackend\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.dll
+D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.pdb

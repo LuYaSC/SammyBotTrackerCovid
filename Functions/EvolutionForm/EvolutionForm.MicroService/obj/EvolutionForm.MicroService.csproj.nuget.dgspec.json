@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.MicroService\\EvolutionForm.MicroService.csproj": {}
+  },
+  "projects": {
+    "D:\\TeleCajaBackend\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
+        "projectName": "Core.AuthConfig.DotNetCore",
+        "projectPath": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\TeleCajaBackend\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj",
+        "projectName": "Core.AuthConfig",
+        "projectPath": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Core\\Core.Business\\Core.Business.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Core\\Core.Business\\Core.Business.csproj",
+        "projectName": "Core.Business",
+        "projectPath": "D:\\TeleCajaBackend\\Core\\Core.Business\\Core.Business.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj",
+        "projectName": "Core.Data",
+        "projectPath": "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Core\\Core.MicroService\\Core.MicroService.csproj",
+        "projectName": "Core.MicroService",
+        "projectPath": "D:\\TeleCajaBackend\\Core\\Core.MicroService\\Core.MicroService.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.Business\\EvolutionForm.Business.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.Business\\EvolutionForm.Business.csproj",
+        "projectName": "EvolutionForm.Business",
+        "projectPath": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.Business\\EvolutionForm.Business.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\TeleCajaBackend\\Core\\Core.Business\\Core.Business.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.Business\\Core.Business.csproj"
+              },
+              "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.Data\\Core.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.MicroService\\EvolutionForm.MicroService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.MicroService\\EvolutionForm.MicroService.csproj",
+        "projectName": "EvolutionForm.MicroService",
+        "projectPath": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.MicroService\\EvolutionForm.MicroService.csproj",
+        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
+        "outputPath": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.MicroService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\TeleCajaBackend\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+              },
+              "D:\\TeleCajaBackend\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Core\\Core.MicroService\\Core.MicroService.csproj"
+              },
+              "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.Business\\EvolutionForm.Business.csproj": {
+                "projectPath": "D:\\TeleCajaBackend\\Functions\\EvolutionForm\\EvolutionForm.Business\\EvolutionForm.Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+D:\CW\CredinetWeb\Core\Core.Validation\bin\Release\Core.Validation.dll
+D:\CW\CredinetWeb\Core\Core.Validation\bin\Release\Core.Validation.pdb
+D:\CW\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.csproj.CoreCompileInputs.cache
+D:\CW\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.dll
+D:\CW\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.pdb
+D:\CW\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemblyReference.cache
+F:\CredinetWeb\Core\Core.Validation\bin\Release\Core.Validation.dll
+F:\CredinetWeb\Core\Core.Validation\bin\Release\Core.Validation.pdb
+F:\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.dll
+F:\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.pdb
+F:\CredinetWeb\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemblyReference.cache
+D:\TeleCajaBackend\Core\Core.Validation\bin\Release\Core.Validation.dll
+D:\TeleCajaBackend\Core\Core.Validation\bin\Release\Core.Validation.pdb
+D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemblyReference.cache
+D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.csproj.CoreCompileInputs.cache
+D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.dll
+D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.pdb

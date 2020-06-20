@@ -1,0 +1,31 @@
+D:\CW\CredinetWeb\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+D:\CW\CredinetWeb\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+D:\CW\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csproj.CoreCompileInputs.cache
+D:\CW\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+D:\CW\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
+D:\CW\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csprojAssemblyReference.cache
+F:\CredinetWeb\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+F:\CredinetWeb\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+F:\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+F:\CredinetWeb\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
+F:\Proyectos Covid\MicroServices\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+F:\Proyectos Covid\MicroServices\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csproj.CoreCompileInputs.cache
+F:\Proyectos Covid\MicroServices\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+F:\Proyectos Covid\MicroServices\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
+F:\TeleCaja\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+F:\TeleCaja\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+F:\TeleCaja\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csproj.CoreCompileInputs.cache
+F:\TeleCaja\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+F:\TeleCaja\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
+D:\TeleCajaBackend\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+D:\TeleCajaBackend\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+D:\TeleCajaBackend\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csprojAssemblyReference.cache
+D:\TeleCajaBackend\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csproj.CoreCompileInputs.cache
+D:\TeleCajaBackend\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+D:\TeleCajaBackend\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Debug\Core.Encrypter.dll
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Debug\Core.Encrypter.pdb
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Debug\Core.Encrypter.csproj.CoreCompileInputs.cache
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Debug\Core.Encrypter.dll
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Debug\Core.Encrypter.pdb
