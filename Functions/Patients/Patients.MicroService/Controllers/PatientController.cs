@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TC.Core.Business;
 using TC.Core.MicroService;
@@ -12,21 +11,20 @@ using TC.Functions.Patients.Business.Models;
 namespace TC.Functions.Patients.MicroService.Controllers
 {
     [Route("api/[controller]/[action]")]
-    [Authorize]
 
     public class PatientController : BaseController
     {
-        IInitialDiagnosisCardBusiness saveForm;
+        IPatientsBusiness service;
 
-        public PatientController(IInitialDiagnosisCardBusiness saveForm)
+        public PatientController(IPatientsBusiness service)
         {
-            this.saveForm = saveForm;
+            this.service = service;
         }
 
-        public Result<FormSaveResult> SaveForm([FromBody] FormDiagDto dto) => saveForm.SaveForm(dto);
+        public Result<List<GetPatientResult>> GetPatients([FromBody] GetPatientsDto dto) => service.GetPatients(dto);
 
-        public Result<List<GetFormPrevious>> GetFormPrevious([FromBody] GetFormPreviousDto dto) => saveForm.GetFormPrevious(dto);
+        public Result<List<TechnicalSheetResult>> GetTechnicalSheet([FromBody] TechnicalSheetDto dto) => service.GetTechnicalSheet(dto);
 
-        public Result<FormDiagResult> GetFormById([FromBody] GetFormById dto) => saveForm.GetFormById(dto);
+        public Result<string> ConfirmedTest([FromBody] TechnicalSheetDto dto) => service.ConfirmedTest(dto);
     }
 }

@@ -15,3 +15,9 @@ D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemb
 D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.csproj.CoreCompileInputs.cache
 D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.dll
 D:\TeleCajaBackend\Core\Core.Validation\obj\Release\Core.Validation.pdb
+D:\SammyBotTrackerCovid\Core\Core.Validation\bin\Release\Core.Validation.dll
+D:\SammyBotTrackerCovid\Core\Core.Validation\bin\Release\Core.Validation.pdb
+D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemblyReference.cache
+D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.csproj.CoreCompileInputs.cache
+D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.dll
+D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.pdb

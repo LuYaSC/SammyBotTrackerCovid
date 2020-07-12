@@ -85,3 +85,17 @@ D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs
 D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
 D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.dll
 D:\TeleCajaBackend\Core\Core.Data\obj\Release\Core.Data.pdb
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll.config
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.pdb
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.xml
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.dll
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.pdb

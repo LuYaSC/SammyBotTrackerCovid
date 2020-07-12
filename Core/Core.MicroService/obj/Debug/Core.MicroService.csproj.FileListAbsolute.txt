@@ -1000,3 +1000,4 @@ D:\SammyBotTrackerCovid\Core\Core.MicroService\obj\Debug\Core.MicroService.cspro
 D:\SammyBotTrackerCovid\Core\Core.MicroService\obj\Debug\Core.MicroService.csproj.CopyComplete
 D:\SammyBotTrackerCovid\Core\Core.MicroService\obj\Debug\Core.MicroService.dll
 D:\SammyBotTrackerCovid\Core\Core.MicroService\obj\Debug\Core.MicroService.pdb
+D:\SammyBotTrackerCovid\Core\Core.MicroService\obj\Debug\Core.MicroService.csprojAssemblyReference.cache

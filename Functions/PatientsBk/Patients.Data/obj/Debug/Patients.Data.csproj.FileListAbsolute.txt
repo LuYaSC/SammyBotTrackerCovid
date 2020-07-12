@@ -1,0 +1,33 @@
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.pdb
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csproj.CoreCompileInputs.cache
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.pdb
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.dll.config
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.xml
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csproj.CopyComplete
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Core.Data.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.DynamicFilters.dll
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Core.Data.pdb
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\Core.Data.dll.config
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.DynamicFilters.xml
+F:\Proyectos Covid\MicroServices\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csprojAssemblyReference.cache
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.dll.config
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.dll
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Patients.Data.pdb
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Core.Data.dll
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\EntityFramework.DynamicFilters.dll
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Core.Data.pdb
+F:\TeleCaja\Functions\Patients\Patients.Data\bin\Debug\Core.Data.dll.config
+F:\TeleCaja\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csprojAssemblyReference.cache
+F:\TeleCaja\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csproj.CoreCompileInputs.cache
+F:\TeleCaja\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.csproj.CopyComplete
+F:\TeleCaja\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.dll
+F:\TeleCaja\Functions\Patients\Patients.Data\obj\Debug\Patients.Data.pdb

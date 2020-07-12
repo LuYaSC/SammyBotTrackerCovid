@@ -60,13 +60,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BOL110Map.cs" />
     <Compile Include="Context\SBTCContext.cs" />
+    <Compile Include="E_EnfermedadMap.cs" />
+    <Compile Include="E_FactoresPatologicosMap.cs" />
+    <Compile Include="E_FactorMap.cs" />
+    <Compile Include="E_GrupoEnfermedadMap.cs" />
+    <Compile Include="E_RelacionFactorEnfermedadMap.cs" />
+    <Compile Include="FormDiagInicialMap.cs" />
+    <Compile Include="G_GeoRegistroMap.cs" />
+    <Compile Include="G_GeoRegistro_PersonaMap.cs" />
+    <Compile Include="G_TipoGeoreferenciacionMap.cs" />
+    <Compile Include="HistoriaClinicaMap.cs" />
     <Compile Include="Migrations\202006180342076_InitalDatabase.cs" />
     <Compile Include="Migrations\202006180342076_InitalDatabase.Designer.cs">
       <DependentUpon>202006180342076_InitalDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007120531112_AddinTablesforSammyBot.cs" />
+    <Compile Include="Migrations\202007120531112_AddinTablesforSammyBot.Designer.cs">
+      <DependentUpon>202007120531112_AddinTablesforSammyBot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="NivelesAlertaMap.cs" />
+    <Compile Include="PacienteMap.cs" />
+    <Compile Include="ParametrosMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_ControlMap.cs" />
+    <Compile Include="P_PacienteMap.cs" />
+    <Compile Include="P_TablaControlMap.cs" />
     <Compile Include="UserDetailMap.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +105,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006180342076_InitalDatabase.resx">
       <DependentUpon>202006180342076_InitalDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007120531112_AddinTablesforSammyBot.resx">
+      <DependentUpon>202007120531112_AddinTablesforSammyBot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

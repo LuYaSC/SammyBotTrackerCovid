@@ -9,3 +9,9 @@ F:\CredinetWeb\Core\Core.Encrypter\bin\Release\Core.Encrypter.pdb
 F:\CredinetWeb\Core\Core.Encrypter\obj\Release\Core.Encrypter.csprojAssemblyReference.cache
 F:\CredinetWeb\Core\Core.Encrypter\obj\Release\Core.Encrypter.dll
 F:\CredinetWeb\Core\Core.Encrypter\obj\Release\Core.Encrypter.pdb
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Release\Core.Encrypter.dll
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Release\Core.Encrypter.pdb
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csprojAssemblyReference.cache
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csproj.CoreCompileInputs.cache
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.dll
+D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.pdb

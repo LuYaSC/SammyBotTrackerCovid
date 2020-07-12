@@ -83,3 +83,4 @@ D:\SammyBotTrackerCovid\Core\Core.Data\obj\Debug\Core.Data.csproj.CoreCompileInp
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Debug\Core.Data.csproj.CopyComplete
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Debug\Core.Data.dll
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Debug\Core.Data.pdb
+D:\SammyBotTrackerCovid\Core\Core.Data\obj\Debug\Core.Data.csprojAssemblyReference.cache
