@@ -24,6 +24,7 @@
     ".NETFramework,Version=v4.6.1": {
       "Patients.MicroService/1.0.0": {
         "dependencies": {
+          "Core.AuthConfig.DotNetCore": "1.0.0",
           "Core.MicroService": "1.0.0",
           "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore": "2.1.7",
@@ -1878,6 +1879,19 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "Core.AuthConfig/1.0.0": {
+        "compile": {
+          "Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "compile": {
+          "Core.AuthConfig.DotNetCore.dll": {}
+        }
+      },
       "Core.Business/1.0.0": {
         "dependencies": {
           "Core.Data": "1.0.0"
@@ -1909,6 +1923,7 @@
     ".NETFramework,Version=v4.6.1/win7-x86": {
       "Patients.MicroService/1.0.0": {
         "dependencies": {
+          "Core.AuthConfig.DotNetCore": "1.0.0",
           "Core.MicroService": "1.0.0",
           "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore": "2.1.7",
@@ -3151,6 +3166,19 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "Core.AuthConfig/1.0.0": {
+        "runtime": {
+          "Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "runtime": {
+          "Core.AuthConfig.DotNetCore.dll": {}
+        }
+      },
       "Core.Business/1.0.0": {
         "dependencies": {
           "Core.Data": "1.0.0"
@@ -3178,6 +3206,26 @@
           "Patients.Business.dll": {}
         }
       },
+      "Microsoft.IdentityModel.Tokens/5.1.4.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Tokens.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/2.0.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security/4.0.0.0": {
+        "runtime": {
+          "Microsoft.Owin.Security.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication/2.0.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
       "AutoMapper/10.0.0.0": {
         "runtime": {
           "AutoMapper.dll": {}
@@ -3196,6 +3244,36 @@
       "EntityFramework.DynamicFilters/3.1.1.0": {
         "runtime": {
           "EntityFramework.DynamicFilters.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Logging/1.1.4.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Logging.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/2.1.4.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/2.1.4.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Protocols.dll": {}
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/5.1.4.0": {
+        "runtime": {
+          "System.IdentityModel.Tokens.Jwt.dll": {}
+        }
+      },
+      "Microsoft.Owin/4.0.0.0": {
+        "runtime": {
+          "Microsoft.Owin.dll": {}
+        }
+      },
+      "Owin/1.0.0.0": {
+        "runtime": {
+          "Owin.dll": {}
         }
       }
     }
@@ -4256,6 +4334,16 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
+    "Core.AuthConfig/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Core.AuthConfig.DotNetCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Core.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4276,6 +4364,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.IdentityModel.Tokens/5.1.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/2.0.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Owin.Security/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication/2.0.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "AutoMapper/10.0.0.0": {
       "type": "reference",
       "serviceable": false,
@@ -4292,6 +4400,36 @@
       "sha512": ""
     },
     "EntityFramework.DynamicFilters/3.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Logging/1.1.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/2.1.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Protocols/2.1.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IdentityModel.Tokens.Jwt/5.1.4.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Owin/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Owin/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

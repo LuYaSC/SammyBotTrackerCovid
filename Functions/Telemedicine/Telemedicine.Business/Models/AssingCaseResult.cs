@@ -11,5 +11,7 @@ namespace TC.Functions.Telemedicine.Business.Models
         public string Message { get; set; }
 
         public int IdControl { get; set; }
+
+        public string UrlSala { get; set; }
     }
 }

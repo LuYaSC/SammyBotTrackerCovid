@@ -84,7 +84,7 @@ namespace TC.Functions.Telemedicine.Business
             {
                 return Result<AssingCaseResult>.SetError("El caso ya esta asignado, favor busque y asignese otro caso");
             }
-            if (!(isDoctor && casePending.DoctorId != 34 && casePending.InternoId == 34))
+            if (isDoctor && casePending.InternoId != 34 && casePending.DoctorId != 34)
             {
                 return Result<AssingCaseResult>.SetError("El caso ya esta asignado, favor busque y asignese otro caso");
             }
@@ -100,7 +100,7 @@ namespace TC.Functions.Telemedicine.Business
             {
                 casePending.InternoId = userId;
             }
-            casePending.UrlSala = $"{configuration.GetSection("UrlSala").Value}{casePending.CodigoSala}&UserName={userName.Trim()}";
+            casePending.UrlSala = result.UrlSala = $"{configuration.GetSection("UrlSala").Value}{casePending.CodigoSala}&UserName={userName.Trim()}";
             Context.Save(casePending);
             result.Message = "Caso Asignado Correctamente favor, verifique los datos del paciente antes de iniciar la consulta";
             var phone = casePending.P_Pacientes.NumeroContacto;
