@@ -2169,6 +2169,27 @@
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Core.AuthConfig/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        }
+      },
       "Core.Business/1.0.0": {
         "type": "project",
         "dependencies": {
@@ -4254,6 +4275,27 @@
         },
         "runtime": {
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "Core.AuthConfig/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
         }
       },
       "Core.Business/1.0.0": {
@@ -8512,6 +8554,16 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Core.AuthConfig/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.AuthConfig/Core.AuthConfig.csproj",
+      "msbuildProject": "../../../Core/Core.AuthConfig/Core.AuthConfig.csproj"
+    },
+    "Core.AuthConfig.DotNetCore/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.AuthConfig.DotNetCore/Core.AuthConfig.DotNetCore.csproj",
+      "msbuildProject": "../../../Core/Core.AuthConfig.DotNetCore/Core.AuthConfig.DotNetCore.csproj"
+    },
     "Core.Business/1.0.0": {
       "type": "project",
       "path": "../../../Core/Core.Business/Core.Business.csproj",
@@ -8535,6 +8587,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "Core.AuthConfig.DotNetCore >= 1.0.0",
       "Core.MicroService >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "Microsoft.AspNetCore >= 2.1.7",
@@ -8569,6 +8622,9 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
+            "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+              "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+            },
             "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
               "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
             },

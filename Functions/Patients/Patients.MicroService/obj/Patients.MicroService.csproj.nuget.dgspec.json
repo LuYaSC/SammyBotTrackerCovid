@@ -4,6 +4,35 @@
     "D:\\SammyBotTrackerCovid\\Functions\\Patients\\Patients.MicroService\\Patients.MicroService.csproj": {}
   },
   "projects": {
+    "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
+        "projectName": "Core.AuthConfig.DotNetCore",
+        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
+                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj",
+        "projectName": "Core.AuthConfig",
+        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
     "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj": {
       "restore": {
         "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj",
@@ -88,6 +117,9 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
+              "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+              },
               "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
                 "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
               },

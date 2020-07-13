@@ -8,10 +8,10 @@
     public class UserRole : IdentityUserRole<int>, /*IUserCreation<string>, IUserModification<string>,*/ IDateCreation, IDateModification, ILogicalDelete
     {
         [ForeignKey("RoleId")]
-        public Role Role { get; set; }
+        public virtual Role Role { get; set; }
 
         [ForeignKey("UserId")]
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         //public string UserCreation { get; set; }
 

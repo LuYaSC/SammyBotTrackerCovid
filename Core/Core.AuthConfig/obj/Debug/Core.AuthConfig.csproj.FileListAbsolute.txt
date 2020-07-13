@@ -339,3 +339,4 @@ D:\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Debug\Core.AuthConfig.csproj.Co
 D:\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Debug\Core.AuthConfig.csproj.CopyComplete
 D:\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Debug\Core.AuthConfig.dll
 D:\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Debug\Core.AuthConfig.pdb
+D:\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Debug\Core.AuthConfig.csprojAssemblyReference.cache

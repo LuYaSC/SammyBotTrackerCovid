@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TC.Core.AuthConfig.DotNetCore;
 using TC.Functions.Patients.Business;
 
 namespace Patients.MicroService
@@ -29,6 +32,10 @@ namespace Patients.MicroService
             services.AddScoped(_ => new PatientsContext(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IPatientsBusiness, PatientsBusiness>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IPrincipal>(
+               provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
+            AuthConfig.Configure(services, Configuration);
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsDevPolicy", builder =>

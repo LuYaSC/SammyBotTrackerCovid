@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TC.Core.Business;
 using TC.Core.MicroService;
@@ -11,6 +12,7 @@ using TC.Functions.Patients.Business.Models;
 namespace TC.Functions.Patients.MicroService.Controllers
 {
     [Route("api/[controller]/[action]")]
+    [Authorize]
 
     public class PatientController : BaseController
     {

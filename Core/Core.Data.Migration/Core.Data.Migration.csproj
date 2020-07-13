@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BOL110Map.cs" />
+    <Compile Include="CasosAgendaMap.cs" />
     <Compile Include="Context\SBTCContext.cs" />
     <Compile Include="E_EnfermedadMap.cs" />
     <Compile Include="E_FactoresPatologicosMap.cs" />
@@ -79,6 +80,18 @@
     <Compile Include="Migrations\202007120531112_AddinTablesforSammyBot.cs" />
     <Compile Include="Migrations\202007120531112_AddinTablesforSammyBot.Designer.cs">
       <DependentUpon>202007120531112_AddinTablesforSammyBot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007120644454_AddingTableCasosAgenda.cs" />
+    <Compile Include="Migrations\202007120644454_AddingTableCasosAgenda.Designer.cs">
+      <DependentUpon>202007120644454_AddingTableCasosAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007130208175_UpdateTableAgendas.cs" />
+    <Compile Include="Migrations\202007130208175_UpdateTableAgendas.Designer.cs">
+      <DependentUpon>202007130208175_UpdateTableAgendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.cs" />
+    <Compile Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.Designer.cs">
+      <DependentUpon>202007130350598_UpdateTableAgendaAddingCodigoSala.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
@@ -108,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007120531112_AddinTablesforSammyBot.resx">
       <DependentUpon>202007120531112_AddinTablesforSammyBot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007120644454_AddingTableCasosAgenda.resx">
+      <DependentUpon>202007120644454_AddingTableCasosAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007130208175_UpdateTableAgendas.resx">
+      <DependentUpon>202007130208175_UpdateTableAgendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.resx">
+      <DependentUpon>202007130350598_UpdateTableAgendaAddingCodigoSala.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

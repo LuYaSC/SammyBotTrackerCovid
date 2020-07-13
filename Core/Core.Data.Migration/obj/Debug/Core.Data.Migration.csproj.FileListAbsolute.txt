@@ -654,3 +654,7 @@ D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\Core.Data.Migration.d
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\Core.Data.Migration.pdb
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.InitalDatabase.resources
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\Core.Data.Migration.csproj.GenerateResource.cache
+D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.AddinTablesforSammyBot.resources
+D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.AddingTableCasosAgenda.resources
+D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.UpdateTableAgendas.resources
+D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.UpdateTableAgendaAddingCodigoSala.resources

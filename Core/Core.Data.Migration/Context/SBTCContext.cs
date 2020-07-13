@@ -37,6 +37,7 @@
             P_PacienteMap.Map(modelBuilder);
             P_TablaControlMap.Map(modelBuilder);
             ParametrosMap.Map(modelBuilder);
+            CasosAgendaMap.Map(modelBuilder);
         }
 
         public DbSet<Audience> Audiences { get; set; }
@@ -65,5 +66,6 @@
         public DbSet<Pacientes> Pacientes { get; set; }
         public DbSet<HistoriaClinicas> HistoriaClinicas { get; set; }
         public DbSet<FormDiagInicials> FormDiagInicials { get; set; }
+        public DbSet<CasosAgenda> CasosAgenda { get; set; }
     }
 }

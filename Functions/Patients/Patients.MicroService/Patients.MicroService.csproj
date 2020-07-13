@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Core.AuthConfig.DotNetCore\Core.AuthConfig.DotNetCore.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.MicroService\Core.MicroService.csproj" />
     <ProjectReference Include="..\Patients.Business\Patients.Business.csproj" />
   </ItemGroup>

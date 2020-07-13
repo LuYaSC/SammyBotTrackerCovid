@@ -61,11 +61,11 @@ namespace TC.Functions.Patients.Business
             P_Pacientes patients = new P_Pacientes();
             if (string.IsNullOrEmpty(dto.CI))
             {
-                patients = Context.Pacientes.Where(x => x.NumeroContacto == dto.Phone).FirstOrDefault();
+                patients = Context.Pacientes.Where(x => x.NumeroContacto.Contains(dto.Phone)).FirstOrDefault();
             }
             else
             {
-                patients = Context.Pacientes.Where(x => x.CI == dto.CI).FirstOrDefault();
+                patients = Context.Pacientes.Where(x => x.CI.Contains(dto.CI)).FirstOrDefault();
             }
 
             return patients != null ? Result<List<GetPatientResult>>.SetOk(mapper.Map<List<GetPatientResult>>(patients.Controles.Where(x => x.ControlFinalizado).ToList())) :
