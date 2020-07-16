@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
 using TC.Core.Business;
 using TC.Core.Data;
@@ -51,9 +52,21 @@ namespace TC.Functions.Telemedicine.Business
             {
                 return Result<List<PendingAppointmentsResult>>.SetError("Esta consulta no esta permitida para su Rol, porfavor comuniquese con el Administrador del sistema");
             }
+            var OnAttended = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
+            if(isIntern)
+            {
+                OnAttended = OnAttended.Where(x => x.InternoId == userId && (x.UrlSala != null || x.UrlSala != "") && (x.NombrePaciente == string.Empty || x.NombrePaciente == null) && (x.Observaciones == string.Empty || x.Observaciones == null)).ToList();
+            }
+            if (isDoctor)
+            {
+                OnAttended = OnAttended.Where(x => x.DoctorId == userId && (x.UrlSala != null || x.UrlSala != "") && (x.NombrePaciente == string.Empty || x.NombrePaciente == null) && (x.Observaciones == string.Empty || x.Observaciones == null)).ToList();
+            }
+            var resultOnAttended = mapper.Map<List<PendingAppointmentsResult>>(OnAttended);
+            resultOnAttended.ForEach(x => x.EnAtencion = true);
             var pendings = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && x.InternoId == 34 && x.DoctorId == 34 && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
-            return pendings.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(mapper.Map<List<PendingAppointmentsResult>>(pendings))
-                : Result<List<PendingAppointmentsResult>>.SetError("No existen datos para mostrar");
+            var resultPendings = mapper.Map<List<PendingAppointmentsResult>>(pendings);
+            var result = resultOnAttended.Concat(resultPendings).OrderByDescending(x => x.DescripcionNivel == 4).ToList();
+            return result.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(result) : Result<List<PendingAppointmentsResult>>.SetError("No existen datos para mostrar");
         }
 
         public Result<List<PendingAppointmentsResult>> GetPatientsAttended(GetDataDto dto)
@@ -62,8 +75,20 @@ namespace TC.Functions.Telemedicine.Business
             {
                 return Result<List<PendingAppointmentsResult>>.SetError("Esta consulta no esta permitida para su Rol, porfavor comuniquese con el Administrador del sistema");
             }
-            var pendings = Context.CasosAgendas.Where(x => x.Finalizado || x.Inconcluso && (dto.Nivel == 0 || x.DescripcionNivel == dto.Nivel) && (x.InternoId == userId || x.DoctorId == userId))
-                                               .OrderByDescending(x => x.FechaModificacion).ToList();
+            var pendings = Context.CasosAgendas.Where(x => x.Finalizado || x.Inconcluso).OrderByDescending(x => x.FechaModificacion).ToList();
+            if (dto.Nivel != 0)
+            {
+                pendings = pendings.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
+            }
+            if(isIntern)
+            {
+                pendings = pendings.Where(x => x.InternoId == userId).ToList();
+            }
+            if(isDoctor)
+            {
+                pendings = pendings.Where(x => x.DoctorId == userId).ToList();
+            }
+
             return pendings.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(mapper.Map<List<PendingAppointmentsResult>>(pendings))
                 : Result<List<PendingAppointmentsResult>>.SetError("No existen datos para mostrar");
         }
@@ -80,11 +105,11 @@ namespace TC.Functions.Telemedicine.Business
             {
                 return Result<AssingCaseResult>.SetError("El caso no existe, verifique porfavor");
             }
-            if (isIntern && casePending.InternoId != 34)
+            if (isIntern && casePending.InternoId != 34 && casePending.InternoId != userId)
             {
                 return Result<AssingCaseResult>.SetError("El caso ya esta asignado, favor busque y asignese otro caso");
             }
-            if (isDoctor && casePending.InternoId != 34 && casePending.DoctorId != 34)
+            if (isDoctor && casePending.InternoId != 34 && casePending.DoctorId != 34 && casePending.DoctorId != userId)
             {
                 return Result<AssingCaseResult>.SetError("El caso ya esta asignado, favor busque y asignese otro caso");
             }
@@ -104,7 +129,7 @@ namespace TC.Functions.Telemedicine.Business
             Context.Save(casePending);
             result.Message = "Caso Asignado Correctamente favor, verifique los datos del paciente antes de iniciar la consulta";
             var phone = casePending.P_Pacientes.NumeroContacto;
-            phone = phone.Substring(0, 3) == "591" ? phone.Substring(3, phone.Length) : phone;
+            phone = phone.Substring(0, 3) == "591" ? phone.Substring(3, phone.Length - 3) : phone;
             var patientControl = Context.Controles.Where(x => x.P_Paciente.NumeroContacto.Contains(phone)).OrderByDescending(x => x.FechaControl).FirstOrDefault();
             if (patientControl == null)
             {
@@ -167,7 +192,7 @@ namespace TC.Functions.Telemedicine.Business
             {
                 return Result<List<DoctorResult>>.SetError("Esta consulta no esta permitida para su Rol, porfavor comuniquese con el Administrador del sistema");
             }
-            var listDoctor = Context.UserRoles.Where(x => x.RoleId == 3 && x.UserId != 34).ToList();
+            var listDoctor = Context.UserRoles.Where(x => x.RoleId == 2 && x.UserId != 34).ToList();
             return listDoctor.Any() ? Result<List<DoctorResult>>.SetOk(mapper.Map<List<DoctorResult>>(listDoctor)) : Result<List<DoctorResult>>.SetError("No se encontraron Doctores");
         }
     }

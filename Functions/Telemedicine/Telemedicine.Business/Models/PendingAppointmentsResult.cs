@@ -28,6 +28,8 @@ namespace TC.Functions.Telemedicine.Business.Models
 
         public string Inconcluso { get; set; }
 
+        public bool EnAtencion { get; set; }
+
         public string Observaciones { get; set; }
 
         public DateTime FechaCreacion { get; set; }
