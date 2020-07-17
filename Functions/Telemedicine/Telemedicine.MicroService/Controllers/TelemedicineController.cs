@@ -23,7 +23,7 @@ namespace Telemedicine.MicroService.Controllers
             this.service = service;
         }
 
-        public Result<List<PendingAppointmentsResult>> GetPendingAppointments() => service.GetPendingAppointments();
+        public Result<List<PendingAppointmentsResult>> GetPendingAppointments([FromBody] GetDataDto dto) => service.GetPendingAppointments(dto);
 
         public Result<List<PendingAppointmentsResult>> GetPatientsAttended([FromBody] GetDataDto dto) => service.GetPatientsAttended(dto);
 

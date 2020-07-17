@@ -46,7 +46,7 @@ namespace TC.Functions.Telemedicine.Business
 
         private string GetNameUser(User user) => user.Id == 34 ? user.UserDetail.Name : $"{user.UserDetail.Name} {user.UserDetail.FirstLastName} {user.UserDetail.SecondLastName}";
 
-        public Result<List<PendingAppointmentsResult>> GetPendingAppointments()
+        public Result<List<PendingAppointmentsResult>> GetPendingAppointments(GetDataDto dto)
         {
             if (!isDoctor && !isIntern)
             {
@@ -65,7 +65,11 @@ namespace TC.Functions.Telemedicine.Business
             resultOnAttended.ForEach(x => x.EnAtencion = true);
             var pendings = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && x.InternoId == 34 && x.DoctorId == 34 && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
             var resultPendings = mapper.Map<List<PendingAppointmentsResult>>(pendings);
-            var result = resultOnAttended.Concat(resultPendings).OrderByDescending(x => x.DescripcionNivel == 4).ToList();
+            var result = resultOnAttended.Concat(resultPendings).OrderBy(y => y.FechaCreacion).OrderByDescending(x => x.DescripcionNivel == 4).ToList();
+            if(dto.Nivel != 0)
+            {
+                result = result.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
+            }
             return result.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(result) : Result<List<PendingAppointmentsResult>>.SetError("No existen datos para mostrar");
         }
 

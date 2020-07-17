@@ -10,7 +10,7 @@ namespace TC.Functions.Telemedicine.Business
 {
     public interface ITelemedicineBusiness
     {
-        Result<List<PendingAppointmentsResult>> GetPendingAppointments();
+        Result<List<PendingAppointmentsResult>> GetPendingAppointments(GetDataDto dto);
 
         Result<List<PendingAppointmentsResult>> GetPatientsAttended(GetDataDto dto);
 
