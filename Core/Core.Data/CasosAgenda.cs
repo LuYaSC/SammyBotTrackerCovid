@@ -31,6 +31,8 @@ namespace TC.Core.Data
 
         public bool Inconcluso { get; set; }
 
+        public bool EnviadoBrigada { get; set; }
+
         public string Observaciones { get; set; }
 
         public DateTime FechaCreacion { get; set; }

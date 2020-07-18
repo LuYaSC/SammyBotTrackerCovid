@@ -38,6 +38,9 @@
             P_TablaControlMap.Map(modelBuilder);
             ParametrosMap.Map(modelBuilder);
             CasosAgendaMap.Map(modelBuilder);
+            CasosGrupoRescateMap.Map(modelBuilder);
+            CasosRecuperadosMap.Map(modelBuilder);
+            CasosCaptadosMap.Map(modelBuilder);
         }
 
         public DbSet<Audience> Audiences { get; set; }
@@ -67,5 +70,9 @@
         public DbSet<HistoriaClinicas> HistoriaClinicas { get; set; }
         public DbSet<FormDiagInicials> FormDiagInicials { get; set; }
         public DbSet<CasosAgenda> CasosAgenda { get; set; }
+        public DbSet<CasosGrupoRescate> CasosRescateGrupos { get; set; }
+        public DbSet<CasosRecuperados> CasosRecuperados { get; set; }
+        public DbSet<CasosCaptados> CasosCaptados { get; set; }
+
     }
 }

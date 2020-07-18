@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="BOL110Map.cs" />
     <Compile Include="CasosAgendaMap.cs" />
+    <Compile Include="CasosCaptadosMap.cs" />
+    <Compile Include="CasosGrupoRescateMap.cs" />
+    <Compile Include="CasosRecuperadosMap.cs" />
     <Compile Include="Context\SBTCContext.cs" />
     <Compile Include="E_EnfermedadMap.cs" />
     <Compile Include="E_FactoresPatologicosMap.cs" />
@@ -92,6 +95,26 @@
     <Compile Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.cs" />
     <Compile Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.Designer.cs">
       <DependentUpon>202007130350598_UpdateTableAgendaAddingCodigoSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007170425559_CreateTableBrigadas.cs" />
+    <Compile Include="Migrations\202007170425559_CreateTableBrigadas.Designer.cs">
+      <DependentUpon>202007170425559_CreateTableBrigadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007170512149_DeleteTableBadCreated.cs" />
+    <Compile Include="Migrations\202007170512149_DeleteTableBadCreated.Designer.cs">
+      <DependentUpon>202007170512149_DeleteTableBadCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007170514267_CreateTableRescueGroups.cs" />
+    <Compile Include="Migrations\202007170514267_CreateTableRescueGroups.Designer.cs">
+      <DependentUpon>202007170514267_CreateTableRescueGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007170521476_AddingFieldsDateTimeControleds.cs" />
+    <Compile Include="Migrations\202007170521476_AddingFieldsDateTimeControleds.Designer.cs">
+      <DependentUpon>202007170521476_AddingFieldsDateTimeControleds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007181926181_CreateTablesForNewProcess.cs" />
+    <Compile Include="Migrations\202007181926181_CreateTablesForNewProcess.Designer.cs">
+      <DependentUpon>202007181926181_CreateTablesForNewProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
@@ -130,6 +153,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007130350598_UpdateTableAgendaAddingCodigoSala.resx">
       <DependentUpon>202007130350598_UpdateTableAgendaAddingCodigoSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170425559_CreateTableBrigadas.resx">
+      <DependentUpon>202007170425559_CreateTableBrigadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170512149_DeleteTableBadCreated.resx">
+      <DependentUpon>202007170512149_DeleteTableBadCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170514267_CreateTableRescueGroups.resx">
+      <DependentUpon>202007170514267_CreateTableRescueGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170521476_AddingFieldsDateTimeControleds.resx">
+      <DependentUpon>202007170521476_AddingFieldsDateTimeControleds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007181926181_CreateTablesForNewProcess.resx">
+      <DependentUpon>202007181926181_CreateTablesForNewProcess.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

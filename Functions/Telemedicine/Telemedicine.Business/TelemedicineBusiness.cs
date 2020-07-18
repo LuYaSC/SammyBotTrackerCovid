@@ -53,7 +53,7 @@ namespace TC.Functions.Telemedicine.Business
                 return Result<List<PendingAppointmentsResult>>.SetError("Esta consulta no esta permitida para su Rol, porfavor comuniquese con el Administrador del sistema");
             }
             var OnAttended = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
-            if(isIntern)
+            if (isIntern)
             {
                 OnAttended = OnAttended.Where(x => x.InternoId == userId && (x.UrlSala != null || x.UrlSala != "") && (x.NombrePaciente == string.Empty || x.NombrePaciente == null) && (x.Observaciones == string.Empty || x.Observaciones == null)).ToList();
             }
@@ -66,7 +66,7 @@ namespace TC.Functions.Telemedicine.Business
             var pendings = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && x.InternoId == 34 && x.DoctorId == 34 && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
             var resultPendings = mapper.Map<List<PendingAppointmentsResult>>(pendings);
             var result = resultOnAttended.Concat(resultPendings).OrderBy(y => y.FechaCreacion).OrderByDescending(x => x.DescripcionNivel == 4).ToList();
-            if(dto.Nivel != 0)
+            if (dto.Nivel != 0)
             {
                 result = result.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
             }
@@ -84,11 +84,11 @@ namespace TC.Functions.Telemedicine.Business
             {
                 pendings = pendings.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
             }
-            if(isIntern)
+            if (isIntern)
             {
                 pendings = pendings.Where(x => x.InternoId == userId).ToList();
             }
-            if(isDoctor)
+            if (isDoctor)
             {
                 pendings = pendings.Where(x => x.DoctorId == userId).ToList();
             }
@@ -186,6 +186,16 @@ namespace TC.Functions.Telemedicine.Business
             endCase.NombrePaciente = dto.NombrePaciente;
             endCase.Observaciones = dto.Observaciones;
             endCase.FechaModificacion = DateTime.Now;
+            if (dto.EnvioBrigada)
+            {
+                Context.Save(new CasosGrupoRescate
+                {
+                    CasoId = dto.CasoId,
+                    DireccionExplicita = dto.DireccionExplicita,
+                    Observaciones = string.Empty,
+                    FechaPriorizacion = DateTime.Now
+                });
+            }
             Context.Save(endCase);
             return Result<string>.SetOk("Caso Atendido, favor iniciar otro caso");
         }

@@ -20,6 +20,10 @@ namespace TC.Functions.Telemedicine.Business.Models
 
         public bool Finalizar { get; set; }
 
+        public bool EnvioBrigada { get; set; }
+
+        public string DireccionExplicita { get; set; }
+
         public string NombrePaciente { get; set; }
 
         public string Observaciones { get; set; }
