@@ -2134,6 +2134,106 @@
         "runtime": {
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "CaseRecovery.Business/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Connectors.TwilioRooms": "1.0.0",
+          "Core.Business": "1.0.0",
+          "Core.Connectors": "1.0.0",
+          "Core.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CaseRecovery.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CaseRecovery.Business.dll": {}
+        }
+      },
+      "Connectors.TwilioRooms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Connectors": "1.0.0",
+          "Core.Validation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Connectors.TwilioRooms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Connectors.TwilioRooms.dll": {}
+        }
+      },
+      "Core.AuthConfig/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        }
+      },
+      "Core.Business/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Business.dll": {}
+        }
+      },
+      "Core.Connectors/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Validation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Connectors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Connectors.dll": {}
+        }
+      },
+      "Core.Data/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Data.dll": {}
+        }
+      },
+      "Core.MicroService/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.MicroService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.MicroService.dll": {}
+        }
+      },
+      "Core.Validation/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Validation.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win7-x86": {
@@ -4143,6 +4243,106 @@
         },
         "runtime": {
           "lib/net46/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "CaseRecovery.Business/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Connectors.TwilioRooms": "1.0.0",
+          "Core.Business": "1.0.0",
+          "Core.Connectors": "1.0.0",
+          "Core.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CaseRecovery.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CaseRecovery.Business.dll": {}
+        }
+      },
+      "Connectors.TwilioRooms/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Connectors": "1.0.0",
+          "Core.Validation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Connectors.TwilioRooms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Connectors.TwilioRooms.dll": {}
+        }
+      },
+      "Core.AuthConfig/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.dll": {}
+        }
+      },
+      "Core.AuthConfig.DotNetCore/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.AuthConfig": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.AuthConfig.DotNetCore.dll": {}
+        }
+      },
+      "Core.Business/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Business.dll": {}
+        }
+      },
+      "Core.Connectors/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Core.Validation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Connectors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Connectors.dll": {}
+        }
+      },
+      "Core.Data/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Data.dll": {}
+        }
+      },
+      "Core.MicroService/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.MicroService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.MicroService.dll": {}
+        }
+      },
+      "Core.Validation/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Core.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Validation.dll": {}
         }
       }
     }
@@ -8287,10 +8487,58 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "CaseRecovery.Business/1.0.0": {
+      "type": "project",
+      "path": "../CaseRecovery.Business/CaseRecovery.Business.csproj",
+      "msbuildProject": "../CaseRecovery.Business/CaseRecovery.Business.csproj"
+    },
+    "Connectors.TwilioRooms/1.0.0": {
+      "type": "project",
+      "path": "../../../Connectors/Connectors.TwilioRooms/Connectors.TwilioRooms.csproj",
+      "msbuildProject": "../../../Connectors/Connectors.TwilioRooms/Connectors.TwilioRooms.csproj"
+    },
+    "Core.AuthConfig/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.AuthConfig/Core.AuthConfig.csproj",
+      "msbuildProject": "../../../Core/Core.AuthConfig/Core.AuthConfig.csproj"
+    },
+    "Core.AuthConfig.DotNetCore/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.AuthConfig.DotNetCore/Core.AuthConfig.DotNetCore.csproj",
+      "msbuildProject": "../../../Core/Core.AuthConfig.DotNetCore/Core.AuthConfig.DotNetCore.csproj"
+    },
+    "Core.Business/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.Business/Core.Business.csproj",
+      "msbuildProject": "../../../Core/Core.Business/Core.Business.csproj"
+    },
+    "Core.Connectors/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.Connectors/Core.Connectors.csproj",
+      "msbuildProject": "../../../Core/Core.Connectors/Core.Connectors.csproj"
+    },
+    "Core.Data/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.Data/Core.Data.csproj",
+      "msbuildProject": "../../../Core/Core.Data/Core.Data.csproj"
+    },
+    "Core.MicroService/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.MicroService/Core.MicroService.csproj",
+      "msbuildProject": "../../../Core/Core.MicroService/Core.MicroService.csproj"
+    },
+    "Core.Validation/1.0.0": {
+      "type": "project",
+      "path": "../../../Core/Core.Validation/Core.Validation.csproj",
+      "msbuildProject": "../../../Core/Core.Validation/Core.Validation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "CaseRecovery.Business >= 1.0.0",
+      "Core.AuthConfig.DotNetCore >= 1.0.0",
+      "Core.MicroService >= 1.0.0",
       "Microsoft.AspNetCore >= 2.1.7",
       "Microsoft.AspNetCore.Mvc >= 2.1.3"
     ]
@@ -8320,7 +8568,17 @@
       },
       "frameworks": {
         "net461": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+              "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+            },
+            "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+              "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+            },
+            "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
+              "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

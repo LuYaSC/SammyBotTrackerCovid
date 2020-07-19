@@ -185,9 +185,12 @@ namespace TC.Functions.Telemedicine.Business
             }
             endCase.NombrePaciente = dto.NombrePaciente;
             endCase.Observaciones = dto.Observaciones;
+            endCase.RecetaMedica = dto.RecetaMedica;
             endCase.FechaModificacion = DateTime.Now;
             if (dto.EnvioBrigada)
             {
+                endCase.EnviadoBrigada = true;
+                endCase.FechaEmisionBrigada = DateTime.Now;
                 Context.Save(new CasosGrupoRescate
                 {
                     CasoId = dto.CasoId,

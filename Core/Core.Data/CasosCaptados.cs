@@ -21,7 +21,7 @@ namespace TC.Core.Data
 
         public DateTime FechaCreacion { get; set; }
 
-        public DateTime FechaFinalizacion { get; set; }
+        public DateTime? FechaFinalizacion { get; set; }
 
         [ForeignKey("InternoId")]
         public virtual User UserInterno { get; set; }

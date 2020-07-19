@@ -17,6 +17,7 @@ namespace TC.Core.Data.Migration
             modelBuilder.Entity<CasosAgenda>().Property(prop => prop.UrlSala).HasColumnType("text");
             modelBuilder.Entity<CasosAgenda>().Property(prop => prop.Observaciones).HasColumnType("text");
             modelBuilder.Entity<CasosAgenda>().Property(prop => prop.CodigoSala).HasColumnType("text");
+            modelBuilder.Entity<CasosAgenda>().Property(prop => prop.RecetaMedica).HasColumnType("text");
         }
     }
 }

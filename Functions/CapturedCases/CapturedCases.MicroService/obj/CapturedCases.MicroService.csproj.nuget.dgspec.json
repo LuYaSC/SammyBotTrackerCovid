@@ -4,6 +4,16 @@
     "D:\\SammyBotTrackerCovid\\Functions\\CapturedCases\\CapturedCases.MicroService\\CapturedCases.MicroService.csproj": {}
   },
   "projects": {
+    "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj",
+        "projectName": "Core.MicroService",
+        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
     "D:\\SammyBotTrackerCovid\\Functions\\CapturedCases\\CapturedCases.MicroService\\CapturedCases.MicroService.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +36,11 @@
         },
         "frameworks": {
           "net461": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

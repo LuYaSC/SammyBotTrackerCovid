@@ -116,6 +116,18 @@
     <Compile Include="Migrations\202007181926181_CreateTablesForNewProcess.Designer.cs">
       <DependentUpon>202007181926181_CreateTablesForNewProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007182259164_UpdateTablesNewProcess.cs" />
+    <Compile Include="Migrations\202007182259164_UpdateTablesNewProcess.Designer.cs">
+      <DependentUpon>202007182259164_UpdateTablesNewProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007182336453_UpdateDateTimeFieldsTablesNewProcess.cs" />
+    <Compile Include="Migrations\202007182336453_UpdateDateTimeFieldsTablesNewProcess.Designer.cs">
+      <DependentUpon>202007182336453_UpdateDateTimeFieldsTablesNewProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007190337050_AddingFieldRecetaMedicaTableRecovers.cs" />
+    <Compile Include="Migrations\202007190337050_AddingFieldRecetaMedicaTableRecovers.Designer.cs">
+      <DependentUpon>202007190337050_AddingFieldRecetaMedicaTableRecovers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
     <Compile Include="PacienteMap.cs" />
@@ -168,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007181926181_CreateTablesForNewProcess.resx">
       <DependentUpon>202007181926181_CreateTablesForNewProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007182259164_UpdateTablesNewProcess.resx">
+      <DependentUpon>202007182259164_UpdateTablesNewProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007182336453_UpdateDateTimeFieldsTablesNewProcess.resx">
+      <DependentUpon>202007182336453_UpdateDateTimeFieldsTablesNewProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007190337050_AddingFieldRecetaMedicaTableRecovers.resx">
+      <DependentUpon>202007190337050_AddingFieldRecetaMedicaTableRecovers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -33,11 +33,17 @@ namespace TC.Core.Data
 
         public bool EnviadoBrigada { get; set; }
 
+        public bool CasoRecuperado { get; set; }
+
         public string Observaciones { get; set; }
+
+        public string RecetaMedica { get; set; }
 
         public DateTime FechaCreacion { get; set; }
 
         public DateTime? FechaModificacion { get; set; }
+
+        public DateTime? FechaEmisionBrigada { get; set; }
 
         [ForeignKey("PacienteId")]
         public virtual P_Pacientes P_Pacientes { get; set; }
