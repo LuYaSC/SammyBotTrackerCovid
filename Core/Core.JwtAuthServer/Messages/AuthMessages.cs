@@ -4,7 +4,7 @@
     {
         public string ErrorLogin => "El Número de Acceso o la Contraseña son incorrectos.";
 
-        public string AccessLocked => "Por razones de seguridad su tarjeta ha sido bloqueada. Para mayor información comuníquese con la línea gratuita 800 10 2244 o con su Ejecutivo Comercial.";
+        public string AccessLocked => "Por razones de seguridad su usuario ha sido bloqueado. Para desbloquear el usuario contactese con 68216880";
 
         public string ErrorPasswordHistory => "No puede asignar una clave de internet que haya sido utilizada anteriormente. Asigne una nueva.";
 

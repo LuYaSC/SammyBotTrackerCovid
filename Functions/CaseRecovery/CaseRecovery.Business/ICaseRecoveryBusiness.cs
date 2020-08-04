@@ -10,9 +10,9 @@ namespace CaseRecovery.Business
 {
     public interface ICaseRecoveryBusiness
     {
-        Result<List<CasesForRecoverResult>> GetCasesForRecovers();
+        Result<List<CasesForRecoverResult>> GetCasesForRecovers(GetDataDto dto);
 
-        Result<string> RecoverCase(GetDataDto dto);
+        Result<bool> RecoverCase(GetDataDto dto);
 
         Result<string> GenerateRoom(GetDataDto dto);
 

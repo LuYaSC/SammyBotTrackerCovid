@@ -32,6 +32,8 @@ namespace TC.Functions.Telemedicine.Business.Models
 
         public string Observaciones { get; set; }
 
+        public string RecetaMedica { get; set; }
+
         public DateTime FechaCreacion { get; set; }
 
         public DateTime? FechaModificacion { get; set; }

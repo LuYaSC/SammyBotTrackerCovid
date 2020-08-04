@@ -29,3 +29,4 @@ D:\SammyBotTrackerCovid\Core\Core.Validation\bin\Debug\Core.Validation.pdb
 D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Debug\Core.Validation.csproj.CoreCompileInputs.cache
 D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Debug\Core.Validation.dll
 D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Debug\Core.Validation.pdb
+D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Debug\Core.Validation.csprojAssemblyReference.cache

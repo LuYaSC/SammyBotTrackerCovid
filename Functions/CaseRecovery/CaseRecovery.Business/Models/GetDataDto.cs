@@ -17,5 +17,7 @@ namespace TC.Functions.CaseRecovery.Business.Models
         public string Observaciones { get; set; }
 
         public string DireccionExplicita { get; set; }
+
+        public int Nivel { get; set; }
     }
 }

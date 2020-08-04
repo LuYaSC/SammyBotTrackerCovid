@@ -27,21 +27,50 @@ namespace CaseRecovery.Business
             isIntern = UserInfo.IsInRole("INTERNO");
             userName = UserInfo.Identity.Name;
             this.service = service;
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<CasosAgenda, CasesForRecoverResult>()
+                    .ForMember(d => d.CasoId, o => o.MapFrom(s => s.Id))
+                    .ForMember(d => d.FechaAtencion, o => o.MapFrom(s => s.FechaModificacion))
+                    .ForMember(d => d.NumeroContacto, o => o.MapFrom(s => s.P_Pacientes.NumeroContacto.Substring(3, s.P_Pacientes.NumeroContacto.Length - 3)))
+                    .ForMember(d => d.Nivel, o => o.MapFrom(s => s.DescripcionNivel));
+
+                //cfg.CreateMap<UserRole, DoctorResult>()
+                //    .ForMember(d => d.DoctorId, o => o.MapFrom(s => s.UserId))
+                //    .ForMember(d => d.Name, o => o.MapFrom(s => $"{s.User.UserDetail.Name} {s.User.UserDetail.FirstLastName} {s.User.UserDetail.SecondLastName}"));
+            });
+            mapper = new Mapper(config);
         }
 
-        public Result<List<CasesForRecoverResult>> GetCasesForRecovers()
+        public Result<List<CasesForRecoverResult>> GetCasesForRecovers(GetDataDto dto)
         {
-            var listCases = Context.CasosAgendas.Where(x => x.NombrePaciente == "SN" && !x.Inconcluso && x.CasoRecuperado).ToList();
+            var listCases = Context.CasosAgendas.Where(x => x.NombrePaciente.Contains("SN") && x.Inconcluso && !x.CasoRecuperado).OrderByDescending(x => x.DescripcionNivel).ToList();
+            if(dto.Nivel != 0)
+            {
+                listCases = listCases.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
+            }
             return listCases.Any() ? Result<List<CasesForRecoverResult>>.SetOk(mapper.Map<List<CasesForRecoverResult>>(listCases))
                 : Result<List<CasesForRecoverResult>>.SetError("No hay registros para mostrar");
         }
 
-        public Result<string> RecoverCase(GetDataDto dto)
+        public Result<bool> RecoverCase(GetDataDto dto)
         {
             var caseData = Context.CasosAgendas.Where(x => x.Id == dto.CasoId).FirstOrDefault();
             if (caseData == null)
             {
-                return Result<string>.SetError("El caso no existe");
+                return Result<bool>.SetError("El caso no existe");
+            }
+            var validCase = Context.CasosRecuperados.Where(x => x.CasoId == dto.CasoId).FirstOrDefault();
+            if(validCase != null)
+            {
+                if(validCase.InternoId == userId)
+                {
+                    return Result<bool>.SetOk(true);
+                }
+                else
+                {
+                    return Result<bool>.SetError("El caso ya esta siendo recuperado por otro doctor, favor buscar otro caso");
+                }
             }
             var recCase = Context.Save(new CasosRecuperados
             {
@@ -55,7 +84,7 @@ namespace CaseRecovery.Business
                 Url = string.Empty,
                 CodigoSala = string.Empty,
             });
-            return recCase.CasoId == 0 ? Result<string>.SetError("Hubo un error intente nuevamente") : Result<string>.SetOk("El caso fue creado correctamente");
+            return recCase.CasoId == 0 ? Result<bool>.SetError("Hubo un error intente nuevamente") : Result<bool>.SetOk(true);
         }
 
         public Result<string> GenerateRoom(GetDataDto dto)

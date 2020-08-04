@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TC.Connectors.TwilioRooms;
 using TC.Core.AuthConfig.DotNetCore;
 
 namespace CaseRecovery.MicroService
@@ -35,6 +36,7 @@ namespace CaseRecovery.MicroService
             services.AddTransient<IPrincipal>(
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
             AuthConfig.Configure(services, Configuration);
+            services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("CreateSala").Value));
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsDevPolicy", builder =>
