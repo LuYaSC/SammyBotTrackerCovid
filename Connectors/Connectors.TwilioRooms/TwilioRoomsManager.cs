@@ -11,13 +11,20 @@ namespace TC.Connectors.TwilioRooms
     public class TwilioRoomsManager : ITwilioRoomsManager
     {
         private string url;
-       // private const string URL_COMPLEMENT_IS_OPERATION_AVAILABLE_METHOD = "IsOperationAvailable";
+       private const string URL_CREATE_ROOM = "Salas";
+        private const string URL_CREATE_ROOM_URL = "AsignarCita";
 
         public TwilioRoomsManager(string url) => this.url = url;
 
         public BaseResponse<GenerateRoomResponse> GenerateRoom(GenerateRoomRequest request)
         {
-            var manager = new GenerateRoomConnector(request, url);
+            var manager = new GenerateRoomConnector(request, $"{url}{URL_CREATE_ROOM}");
+            return manager.Response;
+        }
+
+        public BaseResponse<GenerateRoomUrlResponse> GenerateRoomUrl(GenerateRoomUrlRequest request)
+        {
+            var manager = new GenerateRoomUrlConnector(request, $"{url}{URL_CREATE_ROOM_URL}");
             return manager.Response;
         }
     }

@@ -33,9 +33,23 @@ namespace TC.Functions.Telemedicine.Business
                     .ForMember(d => d.CasoId, o => o.MapFrom(s => s.Id))
                     .ForMember(d => d.Finalizado, o => o.MapFrom(s => s.Finalizado ? "SI" : "NO"))
                     .ForMember(d => d.Inconcluso, o => o.MapFrom(s => s.Inconcluso ? "SI" : "NO"))
-                    .ForMember(d => d.NumeroContacto, o => o.MapFrom(s => s.P_Pacientes.NumeroContacto))
+                    .ForMember(d => d.Identificacion, o => o.MapFrom(s => "AGENDADO"))
+                    .ForMember(d => d.NumeroContacto, o => o.MapFrom(s => s.P_Pacientes.NumeroContacto.Substring(0, 3) == "591" ? s.P_Pacientes.NumeroContacto.Substring(3, s.P_Pacientes.NumeroContacto.Length - 3)
+                    : s.P_Pacientes.NumeroContacto))
                     .ForMember(d => d.NombreInterno, o => o.MapFrom(s => GetNameUser(s.UserInterno)))
                     .ForMember(d => d.NombreDoctor, o => o.MapFrom(s => GetNameUser(s.UserDoctor)));
+
+                cfg.CreateMap<CasosRecuperados, PendingAppointmentsResult>()
+                  .ForMember(d => d.CasoId, o => o.MapFrom(s => s.CasoId))
+                   .ForMember(d => d.FechaCreacion, o => o.MapFrom(s => s.FechaAtencion))
+                  .ForMember(d => d.Finalizado, o => o.MapFrom(s => s.Finalizado ? "SI" : "NO"))
+                  .ForMember(d => d.Inconcluso, o => o.MapFrom(s => s.Inconcluso ? "SI" : "NO"))
+                  .ForMember(d => d.Identificacion, o => o.MapFrom(s => "RECUPERADO"))
+                  .ForMember(d => d.DescripcionNivel, o => o.MapFrom(s => s.CasosAgenda.DescripcionNivel))
+                  .ForMember(d => d.NumeroContacto, o => o.MapFrom(s => s.CasosAgenda.P_Pacientes.NumeroContacto.Substring(0, 3) == "591"
+                  ? s.CasosAgenda.P_Pacientes.NumeroContacto.Substring(3, s.CasosAgenda.P_Pacientes.NumeroContacto.Length - 3) : s.CasosAgenda.P_Pacientes.NumeroContacto))
+                  .ForMember(d => d.NombreInterno, o => o.MapFrom(s => GetNameUser(s.UserInterno)))
+                  .ForMember(d => d.NombreDoctor, o => o.MapFrom(s => "No asignado"));
 
                 cfg.CreateMap<UserRole, DoctorResult>()
                     .ForMember(d => d.DoctorId, o => o.MapFrom(s => s.UserId))
@@ -92,8 +106,16 @@ namespace TC.Functions.Telemedicine.Business
             {
                 pendings = pendings.Where(x => x.DoctorId == userId).ToList();
             }
+            var result = mapper.Map<List<PendingAppointmentsResult>>(pendings);
 
-            return pendings.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(mapper.Map<List<PendingAppointmentsResult>>(pendings))
+            var recoverCases = Context.CasosRecuperados.Where(x => (x.Finalizado || x.Inconcluso) && x.InternoId == userId).OrderByDescending(x => x.FechaAtencion).ToList();
+            if (dto.Nivel != 0)
+            {
+                recoverCases = recoverCases.Where(x => x.CasosAgenda.DescripcionNivel == dto.Nivel).ToList();
+            }
+            var endResult = result.Concat(mapper.Map<List<PendingAppointmentsResult>>(recoverCases));
+
+            return endResult.Any() ? Result<List<PendingAppointmentsResult>>.SetOk(endResult.OrderByDescending(x => x.DescripcionNivel).ToList())
                 : Result<List<PendingAppointmentsResult>>.SetError("No existen datos para mostrar");
         }
 

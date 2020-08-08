@@ -17,5 +17,9 @@ namespace TC.Functions.CaseRecovery.Business.Models
         public DateTime FechaAtencion { get; set; }
 
         public string Observaciones { get; set; }
+
+        public bool Retomar { get; set; }
+
+        public bool Eliminar { get; set; }
     }
 }

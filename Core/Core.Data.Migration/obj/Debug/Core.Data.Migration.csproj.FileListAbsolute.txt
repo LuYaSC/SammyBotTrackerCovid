@@ -666,3 +666,4 @@ D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Co
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.UpdateTablesNewProcess.resources
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.UpdateDateTimeFieldsTablesNewProcess.resources
 D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.AddingFieldRecetaMedicaTableRecovers.resources
+D:\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Debug\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.AddingNamePatientTableRecoverCases.resources

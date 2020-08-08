@@ -13,6 +13,8 @@ namespace TC.Core.Data
 
         public int InternoId { get; set; }
 
+        public string NombrePaciente { get; set; }
+
         public string Observaciones { get; set; }
 
         public string RecetaMedica { get; set; }

@@ -8,14 +8,14 @@ namespace TC.Connectors.TwilioRooms.GenerateRoom
 {
     public class GenerateRoomRequest
     {
-        public string CodigoSala { get; set; }
+        public string codigoSala { get; set; }
 
-        public string NumeroContacto { get; set; }
+        public string numeroContacto { get; set; }
 
-        public int Nivel { get; set; }
+        public int nivel { get; set; }
 
-        public DateTime FechaHoraProgramada { get; set; }
+        public string fechaHoraProgramada { get; set; }
 
-        public DateTime FechaHoraCreacion { get; set; }
+        public string fechaHoraCreacion { get; set; }
     }
 }

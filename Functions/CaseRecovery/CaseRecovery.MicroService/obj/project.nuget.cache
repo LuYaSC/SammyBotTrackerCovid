@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XILYABO2xOpZcHt0rIVIYpztQfa5gdw3YAhP75ROcLr8MGWNF7CMD8vXXnT9N8Rg2m5PJV2/GtH3sGnqhMWmEA==",
+  "dgSpecHash": "BDJetElmTu4nRZnbKwMET/NOBjya8M4W8t0htieWy1ZTzIr7Q/zwA8k5Rt6Ieb11SpIw3zJOPXrTVAQ+nM1EEQ==",
   "success": true,
   "projectFilePath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
   "expectedPackageFiles": [

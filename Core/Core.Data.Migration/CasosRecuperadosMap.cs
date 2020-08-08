@@ -11,6 +11,7 @@ namespace TC.Core.Data.Migration
     {
         public static void Map(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CasosRecuperados>().Property(prop => prop.NombrePaciente).HasColumnType("nvarchar").HasMaxLength(60);
             modelBuilder.Entity<CasosRecuperados>().Property(prop => prop.Observaciones).HasColumnType("text");
             modelBuilder.Entity<CasosRecuperados>().Property(prop => prop.RecetaMedica).HasColumnType("text");
             modelBuilder.Entity<CasosRecuperados>().Property(prop => prop.Url).HasColumnType("text");

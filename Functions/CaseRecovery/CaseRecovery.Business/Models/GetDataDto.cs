@@ -19,5 +19,9 @@ namespace TC.Functions.CaseRecovery.Business.Models
         public string DireccionExplicita { get; set; }
 
         public int Nivel { get; set; }
+
+        public string RecetaMedica { get; set; }
+
+        public string NombrePaciente { get; set; }
     }
 }

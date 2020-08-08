@@ -128,6 +128,10 @@
     <Compile Include="Migrations\202007190337050_AddingFieldRecetaMedicaTableRecovers.Designer.cs">
       <DependentUpon>202007190337050_AddingFieldRecetaMedicaTableRecovers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008080404544_AddingNamePatientTableRecoverCases.cs" />
+    <Compile Include="Migrations\202008080404544_AddingNamePatientTableRecoverCases.Designer.cs">
+      <DependentUpon>202008080404544_AddingNamePatientTableRecoverCases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
     <Compile Include="PacienteMap.cs" />
@@ -189,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007190337050_AddingFieldRecetaMedicaTableRecovers.resx">
       <DependentUpon>202007190337050_AddingFieldRecetaMedicaTableRecovers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008080404544_AddingNamePatientTableRecoverCases.resx">
+      <DependentUpon>202008080404544_AddingNamePatientTableRecoverCases.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

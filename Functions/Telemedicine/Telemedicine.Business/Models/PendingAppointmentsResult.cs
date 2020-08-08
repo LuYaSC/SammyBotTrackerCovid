@@ -37,5 +37,7 @@ namespace TC.Functions.Telemedicine.Business.Models
         public DateTime FechaCreacion { get; set; }
 
         public DateTime? FechaModificacion { get; set; }
+
+        public string Identificacion { get; set; }
     }
 }

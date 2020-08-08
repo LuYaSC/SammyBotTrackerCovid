@@ -36,7 +36,7 @@ namespace CaseRecovery.MicroService
             services.AddTransient<IPrincipal>(
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
             AuthConfig.Configure(services, Configuration);
-            services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("CreateSala").Value));
+            services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("TwilioService").Value));
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsDevPolicy", builder =>

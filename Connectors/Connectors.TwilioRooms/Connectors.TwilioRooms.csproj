@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenerateRoomUrl\GenerateRoomUrlConnector.cs" />
+    <Compile Include="GenerateRoomUrl\GenerateRoomUrlRequest.cs" />
+    <Compile Include="GenerateRoomUrl\GenerateRoomUrlResponse.cs" />
+    <Compile Include="GenerateRoomUrl\GenerateRoomUrlValidator.cs" />
     <Compile Include="GenerateRoom\GenerateRoomConnector.cs" />
     <Compile Include="GenerateRoom\GenerateRoomRequest.cs" />
     <Compile Include="GenerateRoom\GenerateRoomResponse.cs" />

@@ -11,5 +11,7 @@ namespace TC.Connectors.TwilioRooms
     public interface ITwilioRoomsManager
     {
         BaseResponse<GenerateRoomResponse> GenerateRoom(GenerateRoomRequest request);
+
+        BaseResponse<GenerateRoomUrlResponse> GenerateRoomUrl(GenerateRoomUrlRequest request);
     }
 }

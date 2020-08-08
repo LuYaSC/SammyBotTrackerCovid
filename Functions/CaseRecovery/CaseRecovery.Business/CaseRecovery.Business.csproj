@@ -83,6 +83,7 @@
     <Compile Include="CaseRecoveryContext.cs" />
     <Compile Include="ICaseRecoveryBusiness.cs" />
     <Compile Include="Models\CasesForRecoverResult.cs" />
+    <Compile Include="Models\GenerateRoomResult.cs" />
     <Compile Include="Models\GetDataDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

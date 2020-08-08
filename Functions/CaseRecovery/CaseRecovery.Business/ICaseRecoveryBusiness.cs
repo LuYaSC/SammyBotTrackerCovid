@@ -12,9 +12,9 @@ namespace CaseRecovery.Business
     {
         Result<List<CasesForRecoverResult>> GetCasesForRecovers(GetDataDto dto);
 
-        Result<bool> RecoverCase(GetDataDto dto);
+        Result<GenerateRoomResult> RecoverCase(GetDataDto dto);
 
-        Result<string> GenerateRoom(GetDataDto dto);
+        Result<GenerateRoomResult> GenerateRoom(GetDataDto dto);
 
         Result<string> FinalizeCase(GetDataDto dto);
     }

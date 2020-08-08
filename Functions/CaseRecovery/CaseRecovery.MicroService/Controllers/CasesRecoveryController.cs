@@ -25,9 +25,9 @@ namespace TC.Functions.CaseRecovery.MicroService.Controllers
 
         public Result<List<CasesForRecoverResult>> GetCasesForRecovers([FromBody] GetDataDto dto) => service.GetCasesForRecovers(dto);
 
-        public Result<bool> RecoverCase([FromBody] GetDataDto dto) => service.RecoverCase(dto);
+        public Result<GenerateRoomResult> RecoverCase([FromBody] GetDataDto dto) => service.RecoverCase(dto);
 
-        public Result<string> GenerateRoom([FromBody] GetDataDto dto) => service.GenerateRoom(dto);
+        public Result<GenerateRoomResult> GenerateRoom([FromBody] GetDataDto dto) => service.GenerateRoom(dto);
 
         public Result<string> FinalizeCase([FromBody] GetDataDto dto) => service.FinalizeCase(dto);
     }
