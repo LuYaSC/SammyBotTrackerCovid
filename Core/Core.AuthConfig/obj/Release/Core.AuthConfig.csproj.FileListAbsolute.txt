@@ -449,7 +449,6 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\bin\Release\EntityFramewo
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\bin\Release\Microsoft.AspNet.Identity.Core.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\bin\Release\Microsoft.Extensions.Primitives.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Release\Core.AuthConfig.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Release\Core.AuthConfig.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Release\Core.AuthConfig.csproj.CopyComplete
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.AuthConfig\obj\Release\Core.AuthConfig.dll
