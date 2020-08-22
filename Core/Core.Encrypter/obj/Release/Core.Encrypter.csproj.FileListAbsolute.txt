@@ -15,3 +15,9 @@ D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csprojAss
 D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csproj.CoreCompileInputs.cache
 D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.dll
 D:\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.pdb
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Release\Core.Encrypter.dll
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\bin\Release\Core.Encrypter.pdb
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csprojAssemblyReference.cache
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.csproj.CoreCompileInputs.cache
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.dll
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Encrypter\obj\Release\Core.Encrypter.pdb

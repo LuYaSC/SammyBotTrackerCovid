@@ -715,7 +715,6 @@ F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroServi
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\AutoMapper.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\Microsoft.AspNet.Identity.Core.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\Microsoft.AspNet.Identity.EntityFramework.xml
-F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\EntityFramework.DynamicFilters.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\Microsoft.IdentityModel.Logging.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.MicroService\bin\Release\net461\Microsoft.IdentityModel.Protocols.xml

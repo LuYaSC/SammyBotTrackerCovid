@@ -264,7 +264,6 @@ F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\b
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\bin\Release\System.Memory.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\bin\Release\System.Numerics.Vectors.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
-F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\bin\Release\EntityFramework.DynamicFilters.xml
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\obj\Release\Telemedicine.Business.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\obj\Release\Telemedicine.Business.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Functions\Telemedicine\Telemedicine.Business\obj\Release\Telemedicine.Business.csproj.CopyComplete

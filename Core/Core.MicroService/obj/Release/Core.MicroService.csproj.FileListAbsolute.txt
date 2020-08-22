@@ -1039,7 +1039,6 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\bin\Release\System.Buff
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\bin\Release\System.Diagnostics.DiagnosticSource.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\bin\Release\System.Text.Encodings.Web.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.csproj.CopyComplete
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.dll

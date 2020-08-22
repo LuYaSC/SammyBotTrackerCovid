@@ -638,7 +638,6 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\bin\Release\Microsoft.AspNe
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\bin\Release\Microsoft.Extensions.Primitives.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\bin\Release\EntityFramework.DynamicFilters.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\obj\Release\Core.Business.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\obj\Release\Core.Business.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Business\obj\Release\Core.Business.csproj.CopyComplete
