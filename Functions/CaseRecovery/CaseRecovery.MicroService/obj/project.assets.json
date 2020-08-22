@@ -8664,11 +8664,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
+      "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
       "projectName": "CaseRecovery.MicroService",
-      "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
+      "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
       "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-      "outputPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\obj\\",
+      "outputPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8684,14 +8684,14 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
-              "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+            "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+              "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
             },
-            "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
-              "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+            "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+              "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
             },
-            "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
-              "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj"
+            "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
+              "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj"
             }
           }
         }
@@ -8722,7 +8722,7 @@
             "version": "[3.1.6, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

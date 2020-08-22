@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "futIWLUrlC5ngM2rp3SurfgFPQ9NtUkEzXS5UsdGhYYYHrNNz2ROLtzKh1z6JRoVZzhBISjsSt2XTY/gDx9U2Q==",
+  "dgSpecHash": "jOtxDtUIgB/WyvRMj89uqoYGxj8PcRYPMntAE584H/O2KjbddJXJyLrYmcBvB0a90xsnwDvNAs9CeitBBDi6cg==",
   "success": true,
-  "projectFilePath": "D:\\SammyBotTrackerCovid\\Functions\\CapturedCases\\CapturedCases.MicroService\\CapturedCases.MicroService.csproj",
+  "projectFilePath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CapturedCases\\CapturedCases.MicroService\\CapturedCases.MicroService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luisj\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
     "C:\\Users\\luisj\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",

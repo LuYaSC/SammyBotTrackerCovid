@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bd8+IRClYelcrQ8Nvsi4kCmmy6p5WxhssZWzwxqVCCkyYeSkiBIOgEcsWIBSW4Kp4EdsI/zoad6sPr2WgCxvPg==",
+  "dgSpecHash": "f4DP6qmBXl3B3/zYJac8cXe6MYTeF9n7PC3h+8FX8VToCkVFcrfEMaQHByi8qWEM2lFznd6F9mHWu1784hyzUQ==",
   "success": true,
-  "projectFilePath": "D:\\SammyBotTrackerCovid\\Functions\\Patients\\Patients.MicroService\\Patients.MicroService.csproj",
+  "projectFilePath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\Patients\\Patients.MicroService\\Patients.MicroService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luisj\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\luisj\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

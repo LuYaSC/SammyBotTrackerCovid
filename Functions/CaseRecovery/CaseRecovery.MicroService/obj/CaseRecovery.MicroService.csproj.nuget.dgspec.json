@@ -1,22 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj": {}
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj": {}
   },
   "projects": {
-    "D:\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj": {
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj",
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj",
         "projectName": "Connectors.TwilioRooms",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj"
               },
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj"
               }
             }
           }
@@ -26,182 +26,18 @@
         "net461": {}
       }
     },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
         "projectName": "Core.AuthConfig.DotNetCore",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
               }
             }
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj",
-        "projectName": "Core.AuthConfig",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {}
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj",
-        "projectName": "Core.Business",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj"
-              }
-            }
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj",
-        "projectName": "Core.Connectors",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj"
-              }
-            }
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj",
-        "projectName": "Core.Data",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {}
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj",
-        "projectName": "Core.MicroService",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {}
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\packages.config"
-      },
-      "frameworks": {
-        "net461": {}
-      }
-    },
-    "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
-      "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj",
-        "projectName": "Core.Validation",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj",
-        "frameworks": {
-          "net461": {
-            "projectReferences": {}
           }
         }
       },
@@ -209,53 +45,120 @@
         "net461": {}
       }
     },
-    "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj",
-        "projectName": "CaseRecovery.Business",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj",
-        "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net461": {
-            "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj"
-              },
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj"
-              },
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj"
-              },
-              "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj"
-              }
-            }
-          }
-        },
-        "packagesConfigPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\packages.config"
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj",
+        "projectName": "Core.AuthConfig",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig\\Core.AuthConfig.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj": {
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj",
+        "projectName": "Core.Business",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj",
+        "projectName": "Core.Connectors",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj",
+        "projectName": "Core.Data",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj",
+        "projectName": "Core.MicroService",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj",
+        "projectName": "Core.Validation",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Validation\\Core.Validation.csproj"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj",
+        "projectName": "CaseRecovery.Business",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Connectors\\Connectors.TwilioRooms\\Connectors.TwilioRooms.csproj"
+              },
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Business\\Core.Business.csproj"
+              },
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Connectors\\Core.Connectors.csproj"
+              },
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.Data\\Core.Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
+        "projectUniqueName": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
         "projectName": "CaseRecovery.MicroService",
-        "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
+        "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\CaseRecovery.MicroService.csproj",
         "packagesPath": "C:\\Users\\luisj\\.nuget\\packages\\",
-        "outputPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\obj\\",
+        "outputPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.MicroService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luisj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -271,14 +174,14 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.AuthConfig.DotNetCore\\Core.AuthConfig.DotNetCore.csproj"
               },
-              "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Core\\Core.MicroService\\Core.MicroService.csproj"
               },
-              "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
-                "projectPath": "D:\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj"
+              "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj": {
+                "projectPath": "F:\\Proyectos\\SammyBotTrackerCovid\\Functions\\CaseRecovery\\CaseRecovery.Business\\CaseRecovery.Business.csproj"
               }
             }
           }
@@ -309,7 +212,7 @@
               "version": "[3.1.6, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
