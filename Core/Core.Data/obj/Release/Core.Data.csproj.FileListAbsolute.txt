@@ -99,3 +99,17 @@ D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileI
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.dll
 D:\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.pdb
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll.config
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.pdb
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.xml
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.DynamicFilters.xml
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\EntityFramework.SqlServer.xml
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.dll
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.pdb
