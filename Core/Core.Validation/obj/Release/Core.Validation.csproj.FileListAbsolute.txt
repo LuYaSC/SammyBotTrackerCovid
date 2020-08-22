@@ -23,7 +23,6 @@ D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.dll
 D:\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.pdb
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\bin\Release\Core.Validation.dll
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\bin\Release\Core.Validation.pdb
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.dll
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Validation\obj\Release\Core.Validation.pdb

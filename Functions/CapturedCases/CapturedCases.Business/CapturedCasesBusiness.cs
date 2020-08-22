@@ -60,17 +60,17 @@ namespace TC.Functions.CapturedCases.Business
 
         private string GenerateRoom(string nroCto, int nivel)
         {
-            var room = service.GenerateRoom(new GenerateRoomRequest
-            {
-                CodigoSala = nroCto,
-                NumeroContacto = nroCto,
-                Nivel = nivel
-            });
+            //var room = service.GenerateRoom(new GenerateRoomRequest
+            //{
+            //    CodigoSala = nroCto,
+            //    NumeroContacto = nroCto,
+            //    Nivel = nivel
+            //});
 
-            if (!room.Header.IsOk)
-            {
-                return "Hubo un problema al generar la sala intente nuevamente";
-            }
+            //if (!room.Header.IsOk)
+            //{
+            //    return "Hubo un problema al generar la sala intente nuevamente";
+            //}
             //caseData.CodigoSala = "";
             //caseData.Url = $"{configuration.GetSection("UrlSala").Value}{caseData.CodigoSala}&UserName={userName.Trim()}";
             return null;

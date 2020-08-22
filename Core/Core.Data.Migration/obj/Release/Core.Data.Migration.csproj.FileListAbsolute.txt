@@ -609,10 +609,6 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\Core.Data
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\EntityFramework.DynamicFilters.dll
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\Core.Data.pdb
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\Core.Data.dll.config
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\EntityFramework.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\EntityFramework.SqlServer.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\Microsoft.AspNet.Identity.Core.xml
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Release\Core.Data.Migration.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Release\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.InitalDatabase.resources
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data.Migration\obj\Release\TC.BCP.CredinetWeb.Core.Data.Migration.Migrations.AddinTablesforSammyBot.resources

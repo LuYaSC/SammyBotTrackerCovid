@@ -103,7 +103,6 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll.confi
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.dll
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\Core.Data.pdb
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\bin\Release\System.Data.SqlClient.dll
-F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csprojAssemblyReference.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CoreCompileInputs.cache
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.csproj.CopyComplete
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.Data\obj\Release\Core.Data.dll

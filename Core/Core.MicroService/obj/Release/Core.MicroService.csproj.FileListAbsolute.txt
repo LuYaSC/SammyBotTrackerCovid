@@ -1043,3 +1043,4 @@ F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroS
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.csproj.CopyComplete
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.dll
 F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.pdb
+F:\Proyectos\SammyBotTrackerCovid\Core\Core.MicroService\obj\Release\Core.MicroService.csprojAssemblyReference.cache
