@@ -93,6 +93,7 @@
     <Compile Include="NivelesAlertas.cs" />
     <Compile Include="Pacientes.cs" />
     <Compile Include="Parametros.cs" />
+    <Compile Include="PruebasRapidas.cs" />
     <Compile Include="P_Controles.cs" />
     <Compile Include="P_Pacientes.cs" />
     <Compile Include="P_TablaControl.cs" />

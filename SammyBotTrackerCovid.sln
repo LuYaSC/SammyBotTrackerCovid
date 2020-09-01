@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CaseRecovery", "CaseRecover
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseRecovery.Business", "Functions\CaseRecovery\CaseRecovery.Business\CaseRecovery.Business.csproj", "{28EFE352-9009-4B80-97A8-A849907E172C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseRecovery.MicroService", "Functions\CaseRecovery\CaseRecovery.MicroService\CaseRecovery.MicroService.csproj", "{59568CA8-A8F9-473D-8E5B-549A35FB27E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseRecovery.MicroService", "Functions\CaseRecovery\CaseRecovery.MicroService\CaseRecovery.MicroService.csproj", "{59568CA8-A8F9-473D-8E5B-549A35FB27E1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapturedCases", "CapturedCases", "{776FDFD6-0230-49E1-9007-6CFCE675B639}"
 EndProject
@@ -53,13 +53,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Administration", "Administr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapturedCases.Business", "Functions\CapturedCases\CapturedCases.Business\CapturedCases.Business.csproj", "{7B00AFD7-305A-48FB-9DA8-E056E4B26AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapturedCases.MicroService", "Functions\CapturedCases\CapturedCases.MicroService\CapturedCases.MicroService.csproj", "{32032E22-946F-4F4F-86F2-82E78405D87A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapturedCases.MicroService", "Functions\CapturedCases\CapturedCases.MicroService\CapturedCases.MicroService.csproj", "{32032E22-946F-4F4F-86F2-82E78405D87A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administration.Business", "Functions\Adminitration\Administration.Business\Administration.Business.csproj", "{EA09587A-F2DE-47C7-B621-5E3482C03858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administration.MicroService", "Functions\Adminitration\Administration.MicroService\Administration.MicroService.csproj", "{04FAE64F-FB35-4D46-97A5-5A7DDCFFFF97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administration.MicroService", "Functions\Adminitration\Administration.MicroService\Administration.MicroService.csproj", "{04FAE64F-FB35-4D46-97A5-5A7DDCFFFF97}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connectors.TwilioRooms", "Connectors\Connectors.TwilioRooms\Connectors.TwilioRooms.csproj", "{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickTests", "QuickTests", "{FF5E68EA-5603-4A13-B904-FFCF43C502B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTests.Business", "Functions\QuickTests\QuickTests.Business\QuickTests.Business.csproj", "{A5B5811C-6BD8-429A-BD00-83A33B679643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTests.MicroService", "Functions\QuickTests\QuickTests.MicroService\QuickTests.MicroService.csproj", "{ABB58148-0430-4FA0-B9E0-354A4E2F69C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +157,14 @@ Global
 		{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B5811C-6BD8-429A-BD00-83A33B679643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B5811C-6BD8-429A-BD00-83A33B679643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B5811C-6BD8-429A-BD00-83A33B679643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B5811C-6BD8-429A-BD00-83A33B679643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB58148-0430-4FA0-B9E0-354A4E2F69C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB58148-0430-4FA0-B9E0-354A4E2F69C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB58148-0430-4FA0-B9E0-354A4E2F69C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB58148-0430-4FA0-B9E0-354A4E2F69C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +196,9 @@ Global
 		{EA09587A-F2DE-47C7-B621-5E3482C03858} = {9A4FE811-786F-4AB0-A662-58AA83430A43}
 		{04FAE64F-FB35-4D46-97A5-5A7DDCFFFF97} = {9A4FE811-786F-4AB0-A662-58AA83430A43}
 		{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB} = {AFA07AC5-2321-4C5E-9F64-B0092CB127C9}
+		{FF5E68EA-5603-4A13-B904-FFCF43C502B3} = {FCC71EC3-160B-4CC4-BA0E-10E5664FA570}
+		{A5B5811C-6BD8-429A-BD00-83A33B679643} = {FF5E68EA-5603-4A13-B904-FFCF43C502B3}
+		{ABB58148-0430-4FA0-B9E0-354A4E2F69C6} = {FF5E68EA-5603-4A13-B904-FFCF43C502B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F11506EC-B5BE-4474-8DBC-3061926F420D}
