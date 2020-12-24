@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <RootNamespace>TC.Functions.Telemedicine.MicroService</RootNamespace>
+    <UserSecretsId>c1618a18-a7b8-4054-ae1a-08f445b2d02e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

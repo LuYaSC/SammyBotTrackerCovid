@@ -21,6 +21,6 @@ namespace TC.Functions.QuickTests.Business
             return null;
         }
 
-        public Result<>
+        //public Result<>
     }
 }

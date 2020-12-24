@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <RootNamespace>TC.Functions.CaseRecovery.MicroService</RootNamespace>
+    <UserSecretsId>084c8e7d-9e31-4595-9ac5-0e4d00ce9a79</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
