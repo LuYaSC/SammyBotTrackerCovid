@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using TC.Connectors.BotWsp;
 using TC.Connectors.BotWsp.SendMessageWsp;
 using TC.Connectors.JwtAuth;
-using TC.Connectors.JwtAuth.CreatePassword;
 using TC.Connectors.JwtAuth.RegisterUser;
 using TC.Core.Business;
 using TC.Core.Data;
