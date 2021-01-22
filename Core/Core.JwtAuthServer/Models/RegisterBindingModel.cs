@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using TC.Core.JwtAuthServer.Entities;
 using TC.Core.JwtAuthServer.Validators;
 using TC.Core.Validation;
 
@@ -10,14 +11,37 @@ namespace TC.Core.JwtAuthServer.Models
     {        
         public string AccessNumber { get; set; }
 
-        public int CompanyId { get; set; }
+        public string User { get; set; }
 
-        public string UserId { get; set; }
+        public string Email { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public int AvailableDays { get; set; }
+
+        public string Name { get; set; }
+
+        public string FirstLastName { get; set; }
+
+        public string SecondLastName { get; set; }
+
+        public string IpClient { get; set; }
+
+        public string NewPassword { get; set; }
+
+        public List<UserRoleDto> Roles { get; set; }
+
 
         protected override RegisterBindingModel GetThis()
         {
             return this;
         }
+    }
+
+    public class UserRoleDto
+    {
+        public int RoleId { get; set; }
+
     }
 
     public class PasswordModel

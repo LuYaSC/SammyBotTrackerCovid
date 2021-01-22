@@ -10,9 +10,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.BotWsp\Connectors.BotWsp.csproj" />
+    <ProjectReference Include="..\..\..\Connectors\Connectors.JwtAuth\Connectors.JwtAuth.csproj" />
+    <ProjectReference Include="..\..\..\Core\Core.AuthConfig.DotNetCore\Core.AuthConfig.DotNetCore.csproj" />
+    <ProjectReference Include="..\Administration.Business\Administration.Business.csproj" />
   </ItemGroup>
 
 </Project>

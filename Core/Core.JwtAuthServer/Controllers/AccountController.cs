@@ -186,6 +186,56 @@
         }
 
         [AllowAnonymous]
+        [Route("CreatePasswordR")]
+        //[FilterCaptcha]
+        //[RecaptchaValidate]
+        //[FilterSmartlink]
+        public Result<RegisterResult> CreatePasswordR(NewPasswordRequestModel dto)
+        {
+            //User user = await this.UserManager.FindByIdAsync(newPassword.AccessNumber);
+            var user = this.UserManager.FindByName(dto.AccessNumber);
+
+            //if (!captchaManager.VerifyCaptcha(new VerifyCaptcha() { Value = newPassword.CaptchaValue, ValueToVerify = newPassword.CaptchaValueToVerify }))
+            //{
+            //    httpResponse = Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized, this.messages.Captcha);
+            //    return this.ResponseMessage(httpResponse);
+            //}
+
+            if (user == null)
+            {
+                return Result<RegisterResult>.SetError("El usuario no existe");
+            }
+
+            if (user.PasswordHash != null)
+            {
+                return Result<RegisterResult>.SetError("La contraseña no puede estar vacia");
+            }
+
+            if (!(user.State == UserStore.USER_STATE_RESET || user.State == UserStore.USER_STATE_NEW))
+            {
+                return Result<RegisterResult>.SetError("El usuario debe estar en estado Reseteado o Nuevo");
+            }
+
+            user.PasswordHash = this.UserManager.PasswordHasher.HashPassword(dto.NewPassword);
+            user.DateLastPasswordChange = DateTime.Today;
+            user.State = UserStore.USER_STATE_GENERATE;
+            user.AccessFailedCount = 0;
+            IdentityResult result = null;
+
+            result = this.UserManager.Update(user);
+
+            if (!result.Succeeded)
+            {
+                return Result<RegisterResult>.SetError("No se pudo crear la contraseña contactese con el administrador");
+            }
+
+            SessionStore sessionStore = new SessionStore();
+            sessionStore.SaveSession(user, SessionStore.TYPE_SESSION_GENERATE, dto.IpClient);
+
+            return Result<RegisterResult>.SetOk(new RegisterResult { Message = "se creo correctamente" });
+        }
+
+        [AllowAnonymous]
         [Route("ChangePassword")]
         //[FilterCaptcha]
         //[RecaptchaValidate]
@@ -274,19 +324,49 @@
         [Filters.ValidationModel]
         public Result<AccessCardResult> Register(RegisterBindingModel model)
         {
+            if (!model.Roles.Any())
+            {
+                return Result<AccessCardResult>.SetError("El usuario a crearse no tiene roles asignados");
+            }
+            var roles = new List<UserRole>();
+            foreach (var role in model.Roles)
+            {
+                roles.Add(new UserRole
+                {
+                    RoleId = role.RoleId,
+                    DateCreation = DateTime.Now,
+                });
+             }
             var user = new User()
             {
                 UserName = model.AccessNumber,
-                //CompanyId = model.CompanyId,
-                State = UserStore.USER_STATE_NEW,
-                //UserCreation = model.UserId,
-                DateCreation = DateTime.Now
+                Email = model.Email,
+                PhoneNumber = model.PhoneNumber,
+                State = UserStore.USER_STATE_GENERATE,
+                AvailableDays = 120,
+                IsActive = true,
+                DateCreation = DateTime.Now,
+                DateLastPasswordChange = DateTime.Now,
+                DateModification = DateTime.Now,
+                PasswordHash = this.UserManager.PasswordHasher.HashPassword(model.NewPassword),
+                AccessFailedCount = 0,
+                UserDetail = new UserDetail
+                {
+                    Name = model.Name,
+                    FirstLastName = model.FirstLastName,
+                    SecondLastName = model.SecondLastName,
+                    DateCreation = DateTime.Now,
+                    UserCreation = model.User,
+                },
+                UserRoles = roles
             };
             IdentityResult result = UserManager.Create(user);
             if (!result.Succeeded)
             {
                 return Result<AccessCardResult>.SetError(result.Errors.FirstOrDefault());
             }
+            SessionStore sessionStore = new SessionStore();
+            sessionStore.SaveSession(user, SessionStore.TYPE_SESSION_GENERATE, model.IpClient);
             return Result<AccessCardResult>.SetOk(new AccessCardResult { UserId = user.Id });
         }
 
@@ -300,38 +380,6 @@
 
             base.Dispose(disposing);
         }
-
-        //[AllowAnonymous]
-        //[Route("GetCaptcha")]
-        //[HttpPost]
-        //public CaptchaModel GetCaptcha()
-        //{
-        //    return captchaManager.GetCaptcha();
-        //}
-
-        //[Route("ValidatePassword")]
-        //public Result<PasswordValidationResult> ValidatePassword(ValidatePasswordRequestModel dto)
-        //{
-        //    User user = UserManager.FindByName(User.Identity.GetUserName());
-        //    if (user.State == UserStore.USER_STATE_LOCKED)
-        //    {
-        //        return Result<PasswordValidationResult>.SetOk(new PasswordValidationResult { IsValid = false, ErrorMessage = messages.AccessLocked });
-        //    }
-        //    User loggedUser = UserManager.Find(user.UserName, dto.Password);
-        //    if (loggedUser == null)
-        //    {
-        //        if (user.AccessFailedCount == (Convert.ToInt32(ConfigurationManager.AppSettings["maxFailedAccess"]) - 1))
-        //        {
-        //            user.State = UserStore.USER_STATE_LOCKED;
-        //            UserManager.Update(user);
-        //            UserManager.ResetAccessFailedCount(user.Id);
-        //            return Result<PasswordValidationResult>.SetOk(new PasswordValidationResult { IsValid = false, ErrorMessage = messages.AccessLocked });
-        //        }
-        //        UserManager.AccessFailed(user.Id);
-        //        return Result<PasswordValidationResult>.SetOk(new PasswordValidationResult { IsValid = false, ErrorMessage = messages.ErrorLogin });
-        //    }
-        //    return Result<PasswordValidationResult>.SetOk(new PasswordValidationResult { IsValid = true });
-        //}
 
         #region Helpers
 

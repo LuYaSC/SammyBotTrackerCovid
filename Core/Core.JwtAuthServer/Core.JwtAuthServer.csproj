@@ -282,6 +282,7 @@
     <Compile Include="Models\ChangePasswordRequestModel.cs" />
     <Compile Include="Models\ClaimsModel.cs" />
     <Compile Include="Models\ExchangeRateStore.cs" />
+    <Compile Include="Models\RegisterResult.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\UserBackOfficeModel.cs" />
     <Compile Include="Models\PasswordValidationResult.cs" />

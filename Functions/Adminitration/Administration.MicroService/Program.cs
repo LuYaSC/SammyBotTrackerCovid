@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Administration.MicroService
+namespace TC.Functions.Administration.MicroService
 {
     public class Program
     {

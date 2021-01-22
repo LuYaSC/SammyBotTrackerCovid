@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Administration.Business
+namespace TC.Connectors.BotWsp.SendMessageWsp
 {
-    public class Class1
+    public class SendMessageWspResponse
     {
     }
 }
