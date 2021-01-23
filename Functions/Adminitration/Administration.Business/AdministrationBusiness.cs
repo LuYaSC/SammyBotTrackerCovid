@@ -21,7 +21,8 @@ namespace TC.Functions.Administration.Business
         IMapper mapper;
         IJwtAuthManager serviceJwt;
         IBotWspManager serviceBot;
-        string PasswordUser;
+        bool isSentNotification;
+        string messageNotification;
 
         public AdministrationBusiness(AdministrationContext context, IPrincipal userInfo, IConfiguration configuration, IJwtAuthManager serviceJwt, IBotWspManager serviceBot)
             : base(context, userInfo, configuration)
@@ -52,18 +53,31 @@ namespace TC.Functions.Administration.Business
             }
             if(dto.NotifyUser)
             {
-
+                isSentNotification = SendNotification(dto);
+                messageNotification = $"Notifiacion {(isSentNotification ? "enviada" : "no enviado")} correctamente";
             }
-            return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito");
+            return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, {messageNotification}");
         }
 
         private bool SendNotification(GetUserDto dto)
         {
-            var notifyUser = serviceBot.SendMessageWsp(new SendMessageWspRequest { Uid = $"{DateTime.Now.ToString("yyyymmddhhmmss")}{dto.AccessNumber}",
-            To = $"591{dto.PhoneNumber}",
-            Text = $"Saludos Dr.{dto.Name} {dto.FirstLastName} {dto.SecondLastName}, se ha creado un usuario para usted en la plataforma SAMMYBOT <br> " +
-                   $"ahora usted podra atender pacientes, via Telemediciona. BIENVENIDO!!! <br> "});
-
+            var paramater = Context.Parameters.Where(x => x.Code == "" && x.Groups == "").FirstOrDefault();
+            paramater.Description = paramater.Description.Replace("<User>", $"{dto.FirstLastName} {dto.Name} {dto.SecondLastName}");
+            var notifyUser = serviceBot.SendMessageWsp(new SendMessageWspRequest
+            {
+                Uid = $"{DateTime.Now.ToString("yyyymmddhhmmss")}{dto.AccessNumber}",
+                To = $"591{dto.PhoneNumber}",
+                Text = paramater.Description,
+            });
+            if (!notifyUser.Header.IsOk)
+            {
+                return false;
+                
+            }
+            if (notifyUser.Body == null)
+            {
+                return false;
+            }
             return true;
         }
 
