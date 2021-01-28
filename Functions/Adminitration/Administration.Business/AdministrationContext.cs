@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TC.Core.Data;
 using TC.Core.Data.Context;
+using TC.Core.Data;
+using System.Data.Entity;
 
 namespace TC.Functions.Administration.Business
 {

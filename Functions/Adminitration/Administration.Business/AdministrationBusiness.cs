@@ -57,15 +57,32 @@ namespace TC.Functions.Administration.Business
             }
             if (dto.NotifyUser)
             {
-                var paramater = GetParameter("NOTSB", "TXUSCR");
-                if(paramater == null)
-                {
-                    return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, notificación no enviada");
-                }
-                var text = paramater.Description.Replace("<User>", $"{dto.Name} {dto.FirstLastName} {dto.SecondLastName}").Replace("<UserName>", dto.AccessNumber.Trim());
-                messageNotification = SendNotification(createUserConector.Body.Body.UserId, text, dto.PhoneNumber, dto.AccessNumber);
+                isSentNotification = SendNotification(dto);
+                messageNotification = $"Notifiacion {(isSentNotification ? "enviada" : "no enviado")} correctamente";
             }
             return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, {messageNotification}");
+        }
+
+        private bool SendNotification(GetUserDto dto)
+        {
+            var paramater = Context.Parameters.Where(x => x.Code == "" && x.Groups == "").FirstOrDefault();
+            paramater.Description = paramater.Description.Replace("<User>", $"{dto.FirstLastName} {dto.Name} {dto.SecondLastName}");
+            var notifyUser = serviceBot.SendMessageWsp(new SendMessageWspRequest
+            {
+                Uid = $"{DateTime.Now.ToString("yyyymmddhhmmss")}{dto.AccessNumber}",
+                To = $"591{dto.PhoneNumber}",
+                Text = paramater.Description,
+            });
+            if (!notifyUser.Header.IsOk)
+            {
+                return false;
+                
+            }
+            if (notifyUser.Body == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         public Result<List<GetUserResult>> GetListUsers(GetUserDto dto)
