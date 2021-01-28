@@ -6,6 +6,7 @@
     using System;
     using System.Linq;
     using System.Security.Principal;
+    using System.Collections.Generic;
 
     public abstract class BaseBusiness
     {
@@ -79,7 +80,7 @@
 
         protected virtual void Validate(T entity)
         {
-            
+
         }
 
         public virtual Result<string> WarmUp()
@@ -87,6 +88,8 @@
             var data = Context.Set<T>().FirstOrDefault();
             return Result<string>.SetOk(string.Empty);
         }
+
+        public virtual Parameter GetParameter(string group, string code) => Context.Set<Parameter>().Where(x => x.Groups == group && x.Code == code).FirstOrDefault();
 
         protected CONTEXT Context;
     }

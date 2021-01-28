@@ -42,6 +42,8 @@ namespace TC.Core.JwtAuthServer.Models
     {
         public int RoleId { get; set; }
 
+        public bool IsDeleted { get; set; }
+
     }
 
     public class PasswordModel

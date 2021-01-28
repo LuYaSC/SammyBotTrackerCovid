@@ -24,5 +24,9 @@ namespace TC.Functions.Telemedicine.Business
         public DbSet<CasosGrupoRescate> CasosGrupoRescates { get; set; }
 
         public DbSet<UserRole> UserRoles { get; set; }
+
+        public DbSet<Parameter> Parameters { get; set; }
+
+        public DbSet<SendNotification> SendNotifications { get; set; }
     }
 }

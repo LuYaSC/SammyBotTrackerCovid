@@ -23,6 +23,7 @@ namespace TC.Functions.Administration.MicroService.Controllers
         public Result<List<GetUserResult>> GetListUsers([FromBody] GetUserDto dto) => business.GetListUsers(dto);
         public Result<GetUserResult> GetUserId([FromBody] GetUserDto dto) => business.GetUserId(dto);
         public Result<string> ChangeStateUser([FromBody] GetUserDto dto) => business.ChangeStateUser(dto);
-        public Result<string> SendDatesUser() => business.SendDatesUser();
+        public Result<string> DeleteUser([FromBody] GetUserDto dto) => business.DeleteUser(dto);
+        public Result<string> UnlockAllUsers() => business.UnlockAllUsers();
     }
 }

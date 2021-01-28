@@ -335,6 +335,7 @@
                 {
                     RoleId = role.RoleId,
                     DateCreation = DateTime.Now,
+                    IsDeleted = role.IsDeleted
                 });
              }
             var user = new User()

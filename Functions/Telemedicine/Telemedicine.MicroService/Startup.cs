@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TC.Connectors.BotWsp;
 using TC.Core.AuthConfig.DotNetCore;
 using TC.Functions.Telemedicine.Business;
 
@@ -35,6 +36,7 @@ namespace Telemedicine.MicroService
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IPrincipal>(
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
+            services.AddTransient<IBotWspManager>(_ => new BotWspManager(Configuration.GetSection("Connectors")["BotWspService"]));
             AuthConfig.Configure(services, Configuration);
             services.AddCors(options =>
             {

@@ -18,6 +18,8 @@ namespace TC.Functions.Administration.Business
 
         Result<string> ChangeStateUser(GetUserDto dto);
 
-        Result<string> SendDatesUser();
+        Result<string> DeleteUser(GetUserDto dto);
+
+        Result<string> UnlockAllUsers();
     }
 }

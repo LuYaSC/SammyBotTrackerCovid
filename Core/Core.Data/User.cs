@@ -31,7 +31,7 @@ namespace TC.Core.Data
         [MaxLength(1), Column(TypeName = "nchar")]
         public string State { get; set; }
 
-        public List<UserRole> UserRoles { get; set; } 
+        public virtual List<UserRole> UserRoles { get; set; } 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User, int> manager)
         {

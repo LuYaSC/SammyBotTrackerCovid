@@ -92,9 +92,21 @@
     <Compile Include="TelemedicineContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.BotWsp\Connectors.BotWsp.csproj">
+      <Project>{2911c9e9-79e6-407b-8c64-38ea418487b1}</Project>
+      <Name>Connectors.BotWsp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Core.AuthConfig\Core.AuthConfig.csproj">
+      <Project>{f30f59f0-ea0b-4397-9b34-af04e9cd0163}</Project>
+      <Name>Core.AuthConfig</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Core.Business\Core.Business.csproj">
       <Project>{E17B43E5-1246-4133-9D0C-590436DB03E4}</Project>
       <Name>Core.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Core.Connectors\Core.Connectors.csproj">
+      <Project>{377129B7-4391-44BE-B3CF-0D2E1F2234D5}</Project>
+      <Name>Core.Connectors</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Core.Data\Core.Data.csproj">
       <Project>{267AE002-5ED9-4E6F-A5DC-5D915A15E58A}</Project>

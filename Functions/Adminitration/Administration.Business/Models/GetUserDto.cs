@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TC.Core.Business;
 
 namespace TC.Functions.Administration.Business.Models
 {
-    public class GetUserDto
+    public class GetUserDto : IPagination
     {
+        public int userId { get; set; }
+
         public string State { get; set; }
 
         public string AccessNumber { get; set; }
@@ -27,10 +30,18 @@ namespace TC.Functions.Administration.Business.Models
         public List<UserRoleDto> Roles { get; set; }
 
         public bool NotifyUser { get; set; }
+
+        public int PageSize { get; set; }
+
+        public int CurPage { get; set; }
+
+        public int TotalItems { get; set; }
     }
 
     public class UserRoleDto
     {
         public int RoleId { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

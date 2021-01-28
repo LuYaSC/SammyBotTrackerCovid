@@ -18,6 +18,7 @@ namespace TC.Connectors.BotWsp
         public BaseResponse<SendMessageWspResponse> SendMessageWsp(SendMessageWspRequest request)
         {
             var manager = new SendMessageWspConnector(request, $"{url}{METHOD_SEND_TEXT}");
+            var result = manager.Response.Header.IsOk ? "Notifiación enviada correctamente" : "";
             return manager.Response;
         }
     }

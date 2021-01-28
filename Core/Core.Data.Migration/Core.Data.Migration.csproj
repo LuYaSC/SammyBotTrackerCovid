@@ -132,6 +132,14 @@
     <Compile Include="Migrations\202008080404544_AddingNamePatientTableRecoverCases.Designer.cs">
       <DependentUpon>202008080404544_AddingNamePatientTableRecoverCases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101230427179_AddingTableNotifications.cs" />
+    <Compile Include="Migrations\202101230427179_AddingTableNotifications.Designer.cs">
+      <DependentUpon>202101230427179_AddingTableNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101231408237_AddFieldMessageStatusNotifications.cs" />
+    <Compile Include="Migrations\202101231408237_AddFieldMessageStatusNotifications.Designer.cs">
+      <DependentUpon>202101231408237_AddFieldMessageStatusNotifications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
     <Compile Include="PacienteMap.cs" />
@@ -140,6 +148,7 @@
     <Compile Include="P_ControlMap.cs" />
     <Compile Include="P_PacienteMap.cs" />
     <Compile Include="P_TablaControlMap.cs" />
+    <Compile Include="SendNotificationMap.cs" />
     <Compile Include="UserDetailMap.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008080404544_AddingNamePatientTableRecoverCases.resx">
       <DependentUpon>202008080404544_AddingNamePatientTableRecoverCases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101230427179_AddingTableNotifications.resx">
+      <DependentUpon>202101230427179_AddingTableNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101231408237_AddFieldMessageStatusNotifications.resx">
+      <DependentUpon>202101231408237_AddFieldMessageStatusNotifications.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

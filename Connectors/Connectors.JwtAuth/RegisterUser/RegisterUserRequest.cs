@@ -34,5 +34,7 @@ namespace TC.Connectors.JwtAuth.RegisterUser
     public class UserRoleDto
     {
         public int RoleId { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

@@ -98,6 +98,7 @@
     <Compile Include="P_Pacientes.cs" />
     <Compile Include="P_TablaControl.cs" />
     <Compile Include="RefreshToken.cs" />
+    <Compile Include="SendNotification.cs" />
     <Compile Include="UserCardHistory.cs" />
     <Compile Include="Context\SBTCContext.cs" />
     <Compile Include="IAuditable.cs" />

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TC.Core.Data;
 using TC.Core.Data.Context;
 
 namespace TC.Functions.Administration.Business
@@ -13,5 +15,8 @@ namespace TC.Functions.Administration.Business
         {
         }
 
+        public DbSet<Parameter> Parameters { get; set; }
+
+        public DbSet<SendNotification> SendNotifications { get; set; }
     }
 }

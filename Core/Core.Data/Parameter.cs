@@ -15,7 +15,7 @@ namespace TC.Core.Data
         public string Code { get; set; }
         [Required, MaxLength(8)]
         public string Value { get; set; }
-        [Required, MaxLength(80)]
+        [Required, MaxLength(5000)]
         public string Description { get; set; }
     }
 }

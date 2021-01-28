@@ -7,6 +7,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
+using TC.Connectors.BotWsp;
+using TC.Connectors.BotWsp.SendMessageWsp;
+using TC.Core.AuthConfig;
 using TC.Core.Business;
 using TC.Core.Data;
 using TC.Functions.Telemedicine.Business.Models;
@@ -15,15 +18,20 @@ namespace TC.Functions.Telemedicine.Business
 {
     public class TelemedicineBusiness : BaseBusiness<CasosAgenda, TelemedicineContext>, ITelemedicineBusiness
     {
+        IBotWspManager serviceBot;
         IMapper mapper;
         int userId;
         bool isDoctor;
         bool isIntern;
         string userName;
+        string messageNotification;
+        string completeUserName;
 
-        public TelemedicineBusiness(TelemedicineContext context, IPrincipal userInfo, IConfiguration configuration) : base(context, userInfo, configuration)
+        public TelemedicineBusiness(TelemedicineContext context, IPrincipal userInfo, IConfiguration configuration, IBotWspManager serviceBot) : base(context, userInfo, configuration)
         {
+            this.serviceBot = serviceBot;
             userId = UserInfo.Identity.GetUserId<int>();
+            completeUserName = UserInfo.Identity.GetFullUserName();
             isDoctor = UserInfo.IsInRole("MEDICO");
             isIntern = UserInfo.IsInRole("INTERNO");
             userName = UserInfo.Identity.Name;
@@ -162,7 +170,40 @@ namespace TC.Functions.Telemedicine.Business
                 return Result<AssingCaseResult>.SetError("El paciente no tiene fichas que mostrar");
             }
             result.IdControl = patientControl.Id;
+            var parameter = GetParameter("NOTSB", "TXUSNU");
+            if (parameter == null)
+            {
+                return Result<AssingCaseResult>.SetOk(result);
+            }
+            var text = parameter.Description.Replace("<url>", casePending.UrlSala).Replace("<Date>", casePending.FechaCreacion.ToString("yyyy-MM-dd")).Replace("<hour>", casePending.HoraInicio)
+                .Replace("<doctor>", $"{casePending.UserInterno.UserDetail.Name} {casePending.UserInterno.UserDetail.FirstLastName} {casePending.UserInterno.UserDetail.SecondLastName}");
+            messageNotification = SendNotification(text, "59168216880");
+            //messageNotification = SendNotification(text, casePending.P_Pacientes.NumeroContacto);
             return Result<AssingCaseResult>.SetOk(result);
+        }
+
+        private string SendNotification(string text, string phoneNumber)
+        {
+            string result = string.Empty;
+            var uid = $"{DateTime.Now.ToString("yyyymmddhhmmss")}{userId}";
+            var notifyUser = serviceBot.SendMessageWsp(new SendMessageWspRequest
+            {
+                Uid = uid,
+                To = phoneNumber,
+                Text = text
+            });
+            result = notifyUser.Header.IsOk ? "Notificación enviada correctamente"
+                : string.IsNullOrEmpty(notifyUser.Header.FirstError) ? notifyUser.Header.Exception.Message : notifyUser.Header.FirstError;
+            Context.Save(new SendNotification
+            {
+                SendPhone = phoneNumber,
+                UserId = userId,
+                Status = notifyUser.Header.IsOk,
+                UID = uid,
+                MessageStatus = result,
+                DateCreation = DateTime.Now
+            });
+            return result;
         }
 
         public Result<string> AddingDoctor(GetDataDto dto)
@@ -222,7 +263,16 @@ namespace TC.Functions.Telemedicine.Business
                 });
             }
             Context.Save(endCase);
-            return Result<string>.SetOk("Caso Atendido, favor iniciar otro caso");
+            var parameter = GetParameter("NOTSB", "TXUSCF");
+            if (parameter == null)
+            {
+                return Result<string>.SetOk($"Caso Atendido, favor iniciar otro caso, Notificación no enviada");
+            }
+            var text = parameter.Description.Replace("<status>", dto.Finalizar ? "a finalizado" : "no ha finalizado").Replace("<text>", endCase.RecetaMedica)
+                .Replace("<doctor>", completeUserName);
+            messageNotification = SendNotification(text, "59168216880");
+            //messageNotification = SendNotification(text, endCase.P_Pacientes.NumeroContacto);
+            return Result<string>.SetOk($"Caso Atendido, favor iniciar otro caso, {messageNotification}");
         }
 
         public Result<List<DoctorResult>> GetListDoctor()
