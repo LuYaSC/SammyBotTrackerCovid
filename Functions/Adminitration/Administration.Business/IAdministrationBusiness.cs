@@ -21,5 +21,7 @@ namespace TC.Functions.Administration.Business
         Result<string> DeleteUser(GetUserDto dto);
 
         Result<string> UnlockAllUsers();
+
+        Result<string> UpdateUser(GetUserDto dto);
     }
 }

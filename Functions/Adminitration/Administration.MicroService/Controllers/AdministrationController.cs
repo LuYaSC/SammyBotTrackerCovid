@@ -25,5 +25,6 @@ namespace TC.Functions.Administration.MicroService.Controllers
         public Result<string> ChangeStateUser([FromBody] GetUserDto dto) => business.ChangeStateUser(dto);
         public Result<string> DeleteUser([FromBody] GetUserDto dto) => business.DeleteUser(dto);
         public Result<string> UnlockAllUsers() => business.UnlockAllUsers();
+        public Result<string> UpdateUser([FromBody] GetUserDto dto) => business.UpdateUser(dto);
     }
 }

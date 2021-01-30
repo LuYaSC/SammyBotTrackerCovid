@@ -32,17 +32,17 @@
             Precision.ConfigureModelBuilder(modelBuilder);
         }
 
-        //public void DisableFilter<CONTEXT>(CONTEXT context, string nameFilter)
-        //    where CONTEXT : DbContext
-        //{
-        //    DynamicFilterExtensions.DisableFilter(context, nameFilter);
-        //}
+        public void DisableFilter<CONTEXT>(CONTEXT context, string nameFilter)
+            where CONTEXT : DbContext
+        {
+            DynamicFilterExtensions.DisableFilter(context, nameFilter);
+        }
 
-        //public void EnableFilter<CONTEXT>(CONTEXT context, string nameFilter)
-        //   where CONTEXT : DbContext
-        //{
-        //    DynamicFilterExtensions.EnableFilter(context, nameFilter);
-        //}
+        public void EnableFilter<CONTEXT>(CONTEXT context, string nameFilter)
+           where CONTEXT : DbContext
+        {
+            DynamicFilterExtensions.EnableFilter(context, nameFilter);
+        }
 
 
         public DbSet<AuditGroup> AuditGroup { get; set; }

@@ -21,6 +21,7 @@ namespace TC.Functions.Administration.Business
         IBotWspManager serviceBot;
         string messageNotification;
         int totalItems;
+        bool isSentNotification;
 
         public AdministrationBusiness(AdministrationContext context, IPrincipal userInfo, IConfiguration configuration, IJwtAuthManager serviceJwt, IBotWspManager serviceBot)
             : base(context, userInfo, configuration)
@@ -29,6 +30,9 @@ namespace TC.Functions.Administration.Business
             this.serviceBot = serviceBot;
             var config = new MapperConfiguration(cfg =>
             {
+                cfg.CreateMap<string, string>()
+                    .ConvertUsing(str => (str ?? "").Trim());
+
                 cfg.CreateMap<User, GetUserResult>()
                     .ForMember(d => d.TotalItems, o => o.MapFrom(s => totalItems))
                     .ForMember(d => d.Name, o => o.MapFrom(s => s.UserDetail.Name))
@@ -57,32 +61,15 @@ namespace TC.Functions.Administration.Business
             }
             if (dto.NotifyUser)
             {
-                isSentNotification = SendNotification(dto);
-                messageNotification = $"Notifiacion {(isSentNotification ? "enviada" : "no enviado")} correctamente";
+                var parameter = GetParameter("NOTSB", "TXUSCR");
+                if(parameter == null)
+                {
+                    return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, notificacion no enviada");
+                }
+                var text = parameter.Description.Replace("<UserName>", dto.AccessNumber).Replace("<User>", $"{dto.Name} {dto.FirstLastName} {dto.SecondLastName}");
+                messageNotification = SendNotification(createUserConector.Body.Body.UserId, text, dto.PhoneNumber, dto.AccessNumber);
             }
             return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, {messageNotification}");
-        }
-
-        private bool SendNotification(GetUserDto dto)
-        {
-            var paramater = Context.Parameters.Where(x => x.Code == "" && x.Groups == "").FirstOrDefault();
-            paramater.Description = paramater.Description.Replace("<User>", $"{dto.FirstLastName} {dto.Name} {dto.SecondLastName}");
-            var notifyUser = serviceBot.SendMessageWsp(new SendMessageWspRequest
-            {
-                Uid = $"{DateTime.Now.ToString("yyyymmddhhmmss")}{dto.AccessNumber}",
-                To = $"591{dto.PhoneNumber}",
-                Text = paramater.Description,
-            });
-            if (!notifyUser.Header.IsOk)
-            {
-                return false;
-                
-            }
-            if (notifyUser.Body == null)
-            {
-                return false;
-            }
-            return true;
         }
 
         public Result<List<GetUserResult>> GetListUsers(GetUserDto dto)
@@ -109,6 +96,45 @@ namespace TC.Functions.Administration.Business
                 : Result<GetUserResult>.SetError($"El usuario {dto.AccessNumber} no existe");
         }
 
+        public Result<string> UpdateUser(GetUserDto dto)
+        {
+            Context.DisableFilter(Context, "IsDeleted");
+            var user = GetUser(dto.userId);
+            if (user == null)
+            {
+                return Result<string>.SetError("El usuario no existe");
+            }
+            user.UserName = dto.AccessNumber;
+            user.UserDetail.Name = dto.Name;
+            user.UserDetail.FirstLastName = dto.FirstLastName;
+            user.UserDetail.SecondLastName = dto.SecondLastName;
+            user.Email = dto.Email;
+            user.PhoneNumber = dto.PhoneNumber;
+            user.DateModification = DateTime.Now;
+            foreach (var rol in dto.Roles)
+            {
+                var userRol = user.UserRoles.Where(x => x.RoleId == rol.RoleId).FirstOrDefault();
+                if (userRol != null)
+                {
+                    userRol.IsDeleted = rol.IsDeleted;
+                    userRol.DateModification = DateTime.Now;
+                }
+                else
+                {
+                    user.UserRoles.Add(new UserRole
+                    {
+                        UserId = user.Id,
+                        RoleId = rol.RoleId,
+                        IsDeleted = true,
+                        DateCreation = DateTime.Now
+                    });
+                }
+            }
+            Context.Save(user);
+            return Result<string>.SetOk($"El usuario {user.UserName} fue actualizado con éxito");
+
+        }
+
         public Result<string> ChangeStateUser(GetUserDto dto)
         {
             var user = GetUser(dto.userId);
@@ -120,7 +146,7 @@ namespace TC.Functions.Administration.Business
             user.DateModification = DateTime.Now;
             user.DateLastPasswordChange = DateTime.Now;
             Context.Save(user);
-            if(dto.State == "G")
+            if (dto.State == "G")
             {
                 var parameter = GetParameter("NOTSB", "TXUSDS");
                 if (parameter == null)

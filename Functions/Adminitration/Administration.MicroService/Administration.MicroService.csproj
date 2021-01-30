@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <RootNamespace>TC.Functions.Administration.MicroService</RootNamespace>
+    <UserSecretsId>bf8648a5-9675-4d1f-9269-f50e288815cf</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
     <ProjectReference Include="..\..\..\Connectors\Connectors.BotWsp\Connectors.BotWsp.csproj" />
     <ProjectReference Include="..\..\..\Connectors\Connectors.JwtAuth\Connectors.JwtAuth.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.AuthConfig.DotNetCore\Core.AuthConfig.DotNetCore.csproj" />
+    <ProjectReference Include="..\..\..\Core\Core.Business\Core.Business.csproj" />
     <ProjectReference Include="..\Administration.Business\Administration.Business.csproj" />
   </ItemGroup>
 
