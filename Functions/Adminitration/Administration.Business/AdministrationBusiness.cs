@@ -21,7 +21,7 @@ namespace TC.Functions.Administration.Business
         IBotWspManager serviceBot;
         string messageNotification;
         int totalItems;
-        bool isSentNotification;
+        int[] notUsers = new int[] { 28, 34, 35, 36, 37 };
 
         public AdministrationBusiness(AdministrationContext context, IPrincipal userInfo, IConfiguration configuration, IJwtAuthManager serviceJwt, IBotWspManager serviceBot)
             : base(context, userInfo, configuration)
@@ -62,19 +62,19 @@ namespace TC.Functions.Administration.Business
             if (dto.NotifyUser)
             {
                 var parameter = GetParameter("NOTSB", "TXUSCR");
-                if(parameter == null)
+                if (parameter == null)
                 {
                     return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, notificacion no enviada");
                 }
                 var text = parameter.Description.Replace("<UserName>", dto.AccessNumber).Replace("<User>", $"{dto.Name} {dto.FirstLastName} {dto.SecondLastName}");
                 messageNotification = SendNotification(createUserConector.Body.Body.UserId, text, dto.PhoneNumber, dto.AccessNumber);
             }
-            return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito, {messageNotification}");
+            return Result<string>.SetOk($"Usuario {dto.AccessNumber} creado con éxito");
         }
 
         public Result<List<GetUserResult>> GetListUsers(GetUserDto dto)
         {
-            var listUsers = Context.Users.Where(x => x.IsActive).ToList();
+            var listUsers = Context.Users.Where(x => x.IsActive && !notUsers.Contains(x.Id)).ToList();
             if (dto.State != string.Empty && dto.State != null)
             {
                 listUsers = listUsers.Where(x => x.State == dto.State).ToList();
@@ -88,6 +88,8 @@ namespace TC.Functions.Administration.Business
             return listUsers.Any() ? Result<List<GetUserResult>>.SetOk(mapper.Map<List<GetUserResult>>(listpag)) :
                 Result<List<GetUserResult>>.SetError("No existen Usuarios Registrados");
         }
+
+      
 
         public Result<GetUserResult> GetUserId(GetUserDto dto)
         {
@@ -156,7 +158,7 @@ namespace TC.Functions.Administration.Business
                 var text = parameter.Description.Replace("<UserName>", user.UserName.Trim());
                 messageNotification = SendNotification(user.Id, text, user.PhoneNumber.Trim(), user.UserName.Trim());
             }
-            return Result<string>.SetOk($"El usuario {dto.AccessNumber} fue desbloqueado con éxito, {messageNotification}");
+            return Result<string>.SetOk($"El usuario {dto.AccessNumber} fue desbloqueado y su notificacion fue enviada con éxito");
         }
 
         public Result<string> DeleteUser(GetUserDto dto)
@@ -174,10 +176,23 @@ namespace TC.Functions.Administration.Business
 
         public Result<string> UnlockAllUsers()
         {
-            var user = Context.Users.Where(x => x.State != "G").ToList();
-            user.ForEach(x => x.State = "G");
+            var users = Context.Users.Where(x => x.State != "G").ToList();
+            users.ForEach(x => x.State = "G");
             Context.SaveChanges();
-            return Result<string>.SetOk($"Todos los usuarios fueron habilitados con exito");
+            var parameter = GetParameter("NOTSB", "TXUSDS");
+            if (parameter == null)
+            {
+                return Result<string>.SetOk($"Todos los usuarios fueron habilitados con 'exito");
+            }
+            foreach (var user in users)
+            {
+                if (user.State == "G")
+                {
+                    var text = parameter.Description.Replace("<UserName>", user.UserName.Trim());
+                    messageNotification = SendNotification(user.Id, text, user.PhoneNumber.Trim(), user.UserName.Trim());
+                }
+            }
+            return Result<string>.SetOk($"Todos los usuarios fueron habilitados con exito, se enviaron las notificaciones");
         }
 
         private string SendNotification(int userId, string text, string phoneNumber, string uid)
@@ -203,6 +218,7 @@ namespace TC.Functions.Administration.Business
             });
             return result;
         }
+
 
         private User GetUser(int userId) => Context.Users.Where(x => x.Id == userId).FirstOrDefault();
     }
