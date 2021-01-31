@@ -15,6 +15,7 @@ namespace TC.Functions.Patients.Business
     {
         IMapper mapper;
         string categoryName;
+
         public PatientsBusiness(PatientsContext context) : base(context, null)
         {
             var config = new MapperConfiguration(cfg =>
