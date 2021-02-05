@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TC.Core.Business;
 
 namespace TC.Functions.CaseRecovery.Business.Models
 {
-    public class GetDataDto
+    public class GetDataDto : IPagination
     {
         public int CasoId { get; set; }
 
@@ -23,5 +24,9 @@ namespace TC.Functions.CaseRecovery.Business.Models
         public string RecetaMedica { get; set; }
 
         public string NombrePaciente { get; set; }
+
+        public int PageSize { get; set; }
+
+        public int CurPage { get; set; }
     }
 }

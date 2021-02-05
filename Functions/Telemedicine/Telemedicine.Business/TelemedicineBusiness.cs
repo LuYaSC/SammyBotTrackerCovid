@@ -177,8 +177,9 @@ namespace TC.Functions.Telemedicine.Business
             }
             var text = parameter.Description.Replace("<url>", casePending.UrlSala).Replace("<Date>", casePending.FechaCreacion.ToString("yyyy-MM-dd")).Replace("<hour>", casePending.HoraInicio)
                 .Replace("<doctor>", $"{casePending.UserInterno.UserDetail.Name} {casePending.UserInterno.UserDetail.FirstLastName} {casePending.UserInterno.UserDetail.SecondLastName}");
-            messageNotification = SendNotification(text, "59168216880");
-            //messageNotification = SendNotification(text, casePending.P_Pacientes.NumeroContacto);
+
+            //messageNotification = SendNotification(text, "59168216880");
+            messageNotification = SendNotification(text, casePending.P_Pacientes.NumeroContacto);
             return Result<AssingCaseResult>.SetOk(result);
         }
 
@@ -224,7 +225,17 @@ namespace TC.Functions.Telemedicine.Business
             }
             endCase.DoctorId = dto.DoctorId;
             Context.Save(endCase);
-            return Result<string>.SetOk("Doctor Adicionado correctamente al caso");
+            var parameter = GetParameter("NOTSB", "TXADDC");
+            if (parameter == null)
+            {
+                return Result<string>.SetOk("Doctor Adicionado correctamente al caso");
+            }
+            var text = parameter.Description.Replace("<url>", endCase.UrlSala)
+               .Replace("<doctor>", $"{endCase.UserInterno.UserDetail.Name} {endCase.UserInterno.UserDetail.FirstLastName} {endCase.UserInterno.UserDetail.SecondLastName}");
+
+            //messageNotification = SendNotification(text, "59168216880");
+            messageNotification = SendNotification(text, $"591{endCase.UserDoctor.PhoneNumber.Trim()}");
+            return Result<string>.SetOk("Doctor Adicionado correctamente al caso, y fue notificado con exito se unirá a la sala en breve");
         }
 
         public Result<string> UpdateCase(GetDataDto dto)
@@ -270,8 +281,9 @@ namespace TC.Functions.Telemedicine.Business
             }
             var text = parameter.Description.Replace("<status>", dto.Finalizar ? "a finalizado" : "no ha finalizado").Replace("<text>", endCase.RecetaMedica)
                 .Replace("<doctor>", completeUserName);
-            messageNotification = SendNotification(text, "59168216880");
-            //messageNotification = SendNotification(text, endCase.P_Pacientes.NumeroContacto);
+
+            //messageNotification = SendNotification(text, "59168216880");
+            messageNotification = SendNotification(text, endCase.P_Pacientes.NumeroContacto);
             return Result<string>.SetOk($"Caso Atendido, favor iniciar otro caso, {messageNotification}");
         }
 

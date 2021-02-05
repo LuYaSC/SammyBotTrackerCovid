@@ -22,6 +22,7 @@ namespace CaseRecovery.Business
         string userName;
         ITwilioRoomsManager service;
         private const string ROOM_OK = "La Sala se generó con exito, favor verificar los datos del paciente para iniciar la videollamada";
+        int totalItems;
 
         public CaseRecoveryBusiness(CaseRecoveryContext context, IPrincipal userInfo, IConfiguration configuration, ITwilioRoomsManager service) : base(context, userInfo, configuration)
         {
@@ -51,7 +52,9 @@ namespace CaseRecovery.Business
             {
                 listCases = listCases.Where(x => x.DescripcionNivel == dto.Nivel).ToList();
             }
-            var result = mapper.Map<List<CasesForRecoverResult>>(listCases);
+            totalItems = listCases.Count;
+            var listpag = listCases.OrderBy(x => x.Id).Skip(dto.PageSize * (dto.CurPage - 1)).Take(dto.PageSize).ToList();
+            var result = mapper.Map<List<CasesForRecoverResult>>(listpag);
             foreach (var date in result)
             {
                 var verify = Context.CasosRecuperados.Where(x => x.CasoId == date.CasoId).FirstOrDefault();
