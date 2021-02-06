@@ -23,5 +23,7 @@ namespace GetInformationPatient.MicroService.Controllers
         }
 
         public Result<GetInsurancePatientResult> GetInsurancePatient([FromBody] GetInsurancePatientDto dto) => business.GetInsurancePatient(dto);
+
+        public Result<GetRiskCovidResult> GetRiskCovid([FromBody] GetRiskCovidDto dto) => business.GetRiskCovid(dto);
     }
 }

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
 using System.Threading.Tasks;
+using TC.Connectors.RiskCovid;
 using TC.Core.AuthConfig.DotNetCore;
 using TC.Functions.GetInformationPatient.Business;
 
@@ -35,7 +36,7 @@ namespace GetInformationPatient.MicroService
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IPrincipal>(
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
-            //services.AddTransient<IJwtAuthManager>(_ => new JwtAuthManager(Configuration.GetSection("Connectors")["JwtAuthService"]));
+            services.AddTransient<IRiskCovidManager>(_ => new RiskCovidManager(Configuration.GetSection("Connectors")["RiskCovidService"]));
             //services.AddTransient<IBotWspManager>(_ => new BotWspManager(Configuration.GetSection("Connectors")["BotWspService"]));
             AuthConfig.Configure(services, Configuration);
             services.AddCors(options =>

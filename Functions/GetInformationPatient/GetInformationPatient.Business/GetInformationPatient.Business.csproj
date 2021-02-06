@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -84,9 +87,15 @@
     <Compile Include="IGetInformationPatientBusiness.cs" />
     <Compile Include="Models\GetInsurancePatientDto.cs" />
     <Compile Include="Models\GetInsurancePatientResult.cs" />
+    <Compile Include="Models\GetRiskCovidDto.cs" />
+    <Compile Include="Models\GetRiskCovidResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.RiskCovid\Connectors.RiskCovid.csproj">
+      <Project>{76ee5fab-e586-4762-a3bd-eccca7ae9580}</Project>
+      <Name>Connectors.RiskCovid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Core.Business\Core.Business.csproj">
       <Project>{e17b43e5-1246-4133-9d0c-590436db03e4}</Project>
       <Name>Core.Business</Name>

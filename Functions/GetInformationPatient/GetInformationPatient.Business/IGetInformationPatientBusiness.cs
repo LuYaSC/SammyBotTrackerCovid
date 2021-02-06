@@ -11,5 +11,7 @@ namespace TC.Functions.GetInformationPatient.Business
     public interface IGetInformationPatientBusiness
     {
         Result<GetInsurancePatientResult> GetInsurancePatient(GetInsurancePatientDto dto);
+
+        Result<GetRiskCovidResult> GetRiskCovid(GetRiskCovidDto dto);
     }
 }

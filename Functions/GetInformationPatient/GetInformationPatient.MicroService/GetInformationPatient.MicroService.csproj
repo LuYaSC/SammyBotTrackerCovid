@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.RiskCovid\Connectors.RiskCovid.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.AuthConfig.DotNetCore\Core.AuthConfig.DotNetCore.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.Business\Core.Business.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.Connectors\Core.Connectors.csproj" />
