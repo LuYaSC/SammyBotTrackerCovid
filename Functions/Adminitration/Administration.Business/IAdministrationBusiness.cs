@@ -23,5 +23,7 @@ namespace TC.Functions.Administration.Business
         Result<string> UnlockAllUsers();
 
         Result<string> UpdateUser(GetUserDto dto);
+
+        Result<GetUserResult> GetUserEnrollment(GetUserDto dto);
     }
 }

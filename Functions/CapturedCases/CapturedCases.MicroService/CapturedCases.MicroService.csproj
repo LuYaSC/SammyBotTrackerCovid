@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\Core.MicroService\Core.MicroService.csproj" />
+    <ProjectReference Include="..\CapturedCases.Business\CapturedCases.Business.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,14 +10,14 @@ namespace TC.Functions.GetInformationPatient.Business.Models
     {
         // "UOMSYSTEM": false,
         public bool Xray { get; set; }
-        public DateTime Age { get; set; }
+        public int Age { get; set; }
         public bool Hemo { get; set; }
         public bool Dys { get; set; }
         public bool Uncon { get; set; }
         public int Comorbid { get; set; }
         public bool Cancer { get; set; }
-        public int Ratio { get; set; }
-        public int Lactate { get; set; }
+        public decimal Ratio { get; set; }
+        public decimal Lactate { get; set; }
         public decimal Bili { get; set; }
     }
 }

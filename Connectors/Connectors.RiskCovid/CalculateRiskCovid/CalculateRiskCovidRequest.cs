@@ -16,8 +16,8 @@ namespace TC.Connectors.RiskCovid.CalculateRiskCovid
         public int uncon { get; set; }
         public int comorbid { get; set; }
         public int cancer { get; set; }
-        public int ratio { get; set; }
-        public int lactate { get; set; }
+        public decimal ratio { get; set; }
+        public decimal lactate { get; set; }
         public decimal bili { get; set; }
         public string webLanguage { get; set; }
     }

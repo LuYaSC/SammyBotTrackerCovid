@@ -44,7 +44,7 @@ namespace TC.Functions.GetInformationPatient.Business
                 cfg.CreateMap<GetRiskCovidDto, CalculateRiskCovidRequest>()
                       .ForMember(d => d.UOMSYSTEM, o => o.MapFrom(s => false))
                       .ForMember(d => d.webLanguage, o => o.MapFrom(s => "english"))
-                      .ForMember(d => d.age, o => o.MapFrom(s => GetAge(s.Age)))
+                      .ForMember(d => d.age, o => o.MapFrom(s => s.Age))
                       .ForMember(d => d.xray, o => o.MapFrom(s =>  s.Xray ? 1 : 0))
                       .ForMember(d => d.hemo, o => o.MapFrom(s => s.Hemo ? 1 : 0))
                       .ForMember(d => d.dys, o => o.MapFrom(s => s.Dys ? 1 : 0))

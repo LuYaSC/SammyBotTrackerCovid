@@ -89,14 +89,20 @@ namespace TC.Functions.Administration.Business
                 Result<List<GetUserResult>>.SetError("No existen Usuarios Registrados");
         }
 
-      
-
         public Result<GetUserResult> GetUserId(GetUserDto dto)
         {
             var user = GetUser(dto.userId);
             return user == null ? Result<GetUserResult>.SetOk(mapper.Map<GetUserResult>(user))
                 : Result<GetUserResult>.SetError($"El usuario {dto.AccessNumber} no existe");
         }
+
+        public Result<GetUserResult> GetUserEnrollment(GetUserDto dto)
+        {
+            var user = Context.Users.Where(x => x.UserName.Contains(dto.Enrollment)).FirstOrDefault();
+            return user == null ? Result<GetUserResult>.SetError($"El usuario {dto.Enrollment} no existe en el sistema SammyBot") :
+                Result<GetUserResult>.SetOk(mapper.Map<GetUserResult>(user));
+        }
+
 
         public Result<string> UpdateUser(GetUserDto dto)
         {

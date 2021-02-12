@@ -9,6 +9,8 @@ namespace TC.Functions.Administration.Business.Models
 {
     public class GetUserDto : IPagination
     {
+        public string Enrollment { get; set; }
+
         public int userId { get; set; }
 
         public string State { get; set; }

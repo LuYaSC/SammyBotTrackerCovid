@@ -154,8 +154,6 @@ namespace CaseRecovery.Business
             return Result<GenerateRoomResult>.SetOk(new GenerateRoomResult { CasoId = caseData.CasoId, Url = caseData.Url, Message = ROOM_OK });
         }
 
-        private string GetTimeStamp() => ((Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds).ToString();
-
         public Result<string> FinalizeCase(GetDataDto dto)
         {
             var caseData = Context.CasosRecuperados.Where(x => x.CasoId == dto.CasoId).FirstOrDefault();

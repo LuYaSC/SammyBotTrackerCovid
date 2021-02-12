@@ -91,6 +91,8 @@
 
         public virtual Parameter GetParameter(string group, string code) => Context.Set<Parameter>().Where(x => x.Groups == group && x.Code == code).FirstOrDefault();
 
+        public virtual string GetTimeStamp() => ((Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds).ToString();
+
         protected CONTEXT Context;
     }
 }
