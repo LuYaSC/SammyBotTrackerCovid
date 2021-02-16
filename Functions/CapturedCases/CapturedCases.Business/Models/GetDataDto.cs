@@ -12,8 +12,6 @@ namespace TC.Functions.CapturedCases.Business.Models
 
         public string DocumentNumber { get; set; }
 
-        public string NamePatient { get; set; }
-
         public int Level { get; set; }
 
         public string Origin { get; set; }

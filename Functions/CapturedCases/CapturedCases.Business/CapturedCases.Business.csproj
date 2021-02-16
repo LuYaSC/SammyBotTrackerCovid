@@ -79,14 +79,29 @@
     <Compile Include="CapturedCasesBusiness.cs" />
     <Compile Include="CapturedCasesContext.cs" />
     <Compile Include="ICapturedCasesBusiness.cs" />
+    <Compile Include="Models\CreateCaseResult.cs" />
     <Compile Include="Models\GetCapturedCasesResult.cs" />
     <Compile Include="Models\GetDataDto.cs" />
+    <Compile Include="Models\PreviousCaseDto.cs" />
+    <Compile Include="Models\PreviousCaseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.BotWsp\Connectors.BotWsp.csproj">
+      <Project>{2911c9e9-79e6-407b-8c64-38ea418487b1}</Project>
+      <Name>Connectors.BotWsp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Connectors\Connectors.HealthInsurance\Connectors.HealthInsurance.csproj">
+      <Project>{56a79451-48b2-4994-b74f-451aaa1e15d8}</Project>
+      <Name>Connectors.HealthInsurance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Connectors\Connectors.TwilioRooms\Connectors.TwilioRooms.csproj">
       <Project>{CCD3C210-4378-4CAA-AAE7-AF8F8F2EA9BB}</Project>
       <Name>Connectors.TwilioRooms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Core.AuthConfig\Core.AuthConfig.csproj">
+      <Project>{f30f59f0-ea0b-4397-9b34-af04e9cd0163}</Project>
+      <Name>Core.AuthConfig</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Core.Business\Core.Business.csproj">
       <Project>{E17B43E5-1246-4133-9D0C-590436DB03E4}</Project>

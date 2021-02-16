@@ -12,6 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TC.Connectors.BotWsp;
+using TC.Connectors.HealthInsurance;
+using TC.Connectors.TwilioRooms;
+using TC.Core.AuthConfig.DotNetCore;
 using TC.Functions.CapturedCases.Business;
 
 namespace CapturedCases.MicroService
@@ -29,13 +33,15 @@ namespace CapturedCases.MicroService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped(_ => new CapturedCasesContext(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<ICaseRecoveryBusiness, CaseRecoveryBusiness>();
+            services.AddTransient<ICapturedCasesBusiness, CapturedCasesBusiness>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IPrincipal>(
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
             AuthConfig.Configure(services, Configuration);
-            services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("TwilioService").Value));
+            services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("Connectors")["TwilioService"]));
+            services.AddTransient<IHealthInsuranceManager>(_ => new HealthInsuranceManager(Configuration.GetSection("Connectors")["HealthInsuranceService"]));
+            services.AddTransient<IBotWspManager>(_ => new BotWspManager(Configuration.GetSection("Connectors")["BotWspService"]));
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsDevPolicy", builder =>

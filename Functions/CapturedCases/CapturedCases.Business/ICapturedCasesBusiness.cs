@@ -10,6 +10,6 @@ namespace TC.Functions.CapturedCases.Business
 {
     public interface ICapturedCasesBusiness
     {
-        Result<string> CreateCase(GetDataDto dto);
+        Result<CreateCaseResult> CreateCase(GetDataDto dto);
     }
 }

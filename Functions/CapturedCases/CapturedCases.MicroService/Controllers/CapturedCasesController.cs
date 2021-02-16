@@ -23,6 +23,6 @@ namespace TC.Functions.CapturedCases.MicroService.Controllers
             this.business = business;
         }
 
-        public Result<string> CreateCase(GetDataDto dto) => business.CreateCase(dto);
+        public Result<CreateCaseResult> CreateCase([FromBody] GetDataDto dto) => business.CreateCase(dto);
     }
 }

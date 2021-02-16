@@ -85,6 +85,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetInformationPatient.Micro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connectors.RiskCovid", "Connectors\Connectors.RiskCovid\Connectors.RiskCovid.csproj", "{76EE5FAB-E586-4762-A3BD-ECCCA7AE9580}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connectors.HealthInsurance", "Connectors\Connectors.HealthInsurance\Connectors.HealthInsurance.csproj", "{56A79451-48B2-4994-B74F-451AAA1E15D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -211,6 +213,10 @@ Global
 		{76EE5FAB-E586-4762-A3BD-ECCCA7AE9580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76EE5FAB-E586-4762-A3BD-ECCCA7AE9580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76EE5FAB-E586-4762-A3BD-ECCCA7AE9580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A79451-48B2-4994-B74F-451AAA1E15D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A79451-48B2-4994-B74F-451AAA1E15D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A79451-48B2-4994-B74F-451AAA1E15D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A79451-48B2-4994-B74F-451AAA1E15D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,6 +260,7 @@ Global
 		{C980166F-9CFA-4E48-9233-EF1DB39EDA55} = {9287847D-0505-4FEE-AA91-B5779C71EBB3}
 		{744304EF-DAFA-4CC9-A59E-F743B66D5B69} = {9287847D-0505-4FEE-AA91-B5779C71EBB3}
 		{76EE5FAB-E586-4762-A3BD-ECCCA7AE9580} = {AFA07AC5-2321-4C5E-9F64-B0092CB127C9}
+		{56A79451-48B2-4994-B74F-451AAA1E15D8} = {AFA07AC5-2321-4C5E-9F64-B0092CB127C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F11506EC-B5BE-4474-8DBC-3061926F420D}
