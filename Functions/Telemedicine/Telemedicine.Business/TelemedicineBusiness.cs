@@ -77,7 +77,7 @@ namespace TC.Functions.Telemedicine.Business
             var OnAttended = Context.CasosAgendas.Where(x => !x.Finalizado && !x.Inconcluso && DbFunctions.TruncateTime(x.FechaCreacion) == DbFunctions.TruncateTime(DateTime.Now)).ToList();
             if (isIntern)
             {
-                OnAttended = OnAttended.Where(x => x.InternoId == userId && (x.UrlSala != null || x.UrlSala != "") && (x.NombrePaciente == string.Empty || x.NombrePaciente == null) && (x.Observaciones == string.Empty || x.Observaciones == null)).ToList();
+                OnAttended = OnAttended.Where(x => x.InternoId == userId && (x.UrlSala != null || x.UrlSala != "") /*&& (x.NombrePaciente == string.Empty || x.NombrePaciente == null)*/ && (x.Observaciones == string.Empty || x.Observaciones == null)).ToList();
             }
             if (isDoctor)
             {

@@ -107,6 +107,8 @@ namespace TC.Functions.CapturedCases.Business
         public Result<CreateCaseResult> CreateCase(GetDataDto dto)
         {
             CreateCaseResult result = new CreateCaseResult();
+            result.PhoneNumber = dto.PhoneNumber;
+            result.DocumentNumber = dto.DocumentNumber;
             dto.PhoneNumber = dto.PhoneNumber.Substring(0, 3) == "591" ? dto.PhoneNumber : $"591{dto.PhoneNumber}";
             //Validate Patient
             patient = Context.Pacientes.Where(x => x.NumeroContacto == dto.PhoneNumber).FirstOrDefault();
@@ -157,7 +159,7 @@ namespace TC.Functions.CapturedCases.Business
             }
             var text = parameter.Description.Replace("<url>", urlRoom).Replace("<Date>", DateTime.Now.ToString("yyyy-MM-dd")).Replace("<hour>", newCase.HoraInicio)
                 .Replace("<doctor>", doctorName);
-            var messageNotification = SendNotification(text, "59168216880");
+            //var messageNotification = SendNotification(text, "59168216880");
             //var messageNotification = SendNotification(text, dto.PhoneNumber);
             return newCase.Id == 0 ? Result<CreateCaseResult>.SetError("Hubo un error intente nuevamente") : Result<CreateCaseResult>.SetOk(result);
         }

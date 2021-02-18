@@ -65,7 +65,7 @@ namespace CapturedCases.MicroService
             {
                 app.UseHsts();
             }
-
+            app.UseCors("CorsDevPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

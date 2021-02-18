@@ -11,5 +11,7 @@ namespace TC.Functions.CapturedCases.Business
     public interface ICapturedCasesBusiness
     {
         Result<CreateCaseResult> CreateCase(GetDataDto dto);
+
+        Result<PreviousCaseResult> GetPreviousCase(PreviousCaseDto dto);
     }
 }

@@ -24,5 +24,7 @@ namespace TC.Functions.CapturedCases.MicroService.Controllers
         }
 
         public Result<CreateCaseResult> CreateCase([FromBody] GetDataDto dto) => business.CreateCase(dto);
+
+        public Result<PreviousCaseResult> GetPreviousCase([FromBody] PreviousCaseDto dto) => business.GetPreviousCase(dto);
     }
 }

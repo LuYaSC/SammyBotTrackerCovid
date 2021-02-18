@@ -28,6 +28,10 @@ namespace TC.Functions.CapturedCases.Business.Models
 
         public int LastControlId { get; set; }
 
+        public string PhoneNumber { get; set; }
+
+        public string DocumentNumber { get; set; }
+
         public List<PreviousAttention> PreviousAttentions { get; set; }
     }
 
