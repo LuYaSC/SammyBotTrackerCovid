@@ -42,6 +42,7 @@
             CasosRecuperadosMap.Map(modelBuilder);
             CasosCaptadosMap.Map(modelBuilder);
             SendNotificationMap.Map(modelBuilder);
+            CapturedCaseMap.Map(modelBuilder);
         }
 
         public DbSet<Audience> Audiences { get; set; }
@@ -75,5 +76,6 @@
         public DbSet<CasosRecuperados> CasosRecuperados { get; set; }
         public DbSet<CasosCaptados> CasosCaptados { get; set; }
         public DbSet<SendNotification> SendNotifications { get; set; }
+        public DbSet<CapturedCase> CapturedCases { get; set; }
     }
 }

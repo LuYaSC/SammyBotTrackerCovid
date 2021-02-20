@@ -115,7 +115,6 @@ namespace TC.Functions.Telemedicine.Business
                 pendings = pendings.Where(x => x.DoctorId == userId).ToList();
             }
             var result = mapper.Map<List<PendingAppointmentsResult>>(pendings);
-
             var recoverCases = Context.CasosRecuperados.Where(x => (x.Finalizado || x.Inconcluso) && x.InternoId == userId).OrderByDescending(x => x.FechaAtencion).ToList();
             if (dto.Nivel != 0)
             {

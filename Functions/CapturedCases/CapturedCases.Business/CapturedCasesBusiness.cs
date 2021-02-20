@@ -76,6 +76,8 @@ namespace TC.Functions.CapturedCases.Business
                     .ForMember(d => d.CodigoSala, o => o.MapFrom(s => codeRoom))
                     .ForMember(d => d.UrlSala, o => o.MapFrom(s => urlRoom));
 
+                cfg.CreateMap<CreateCaseResult, CapturedCase>();
+
                 cfg.CreateMap<GetDataDto, GetInsurancePersonRequest>();
 
                 cfg.CreateMap<CasosAgenda, PreviousAttention>()
@@ -150,6 +152,7 @@ namespace TC.Functions.CapturedCases.Business
             result.UrlRoom = urlRoom;
             var newCase = Context.Save(mapper.Map<CasosAgenda>(dto));
             result.CaseId = newCase.Id;
+            newCase.CapturedCases = mapper.Map<CapturedCase>(result);
 
             //Notifiation Patient
             var parameter = GetParameter("NOTSB", "TXUSNU");
@@ -160,7 +163,7 @@ namespace TC.Functions.CapturedCases.Business
             var text = parameter.Description.Replace("<url>", urlRoom).Replace("<Date>", DateTime.Now.ToString("yyyy-MM-dd")).Replace("<hour>", newCase.HoraInicio)
                 .Replace("<doctor>", doctorName);
             //var messageNotification = SendNotification(text, "59168216880");
-            //var messageNotification = SendNotification(text, dto.PhoneNumber);
+            var messageNotification = SendNotification(text, dto.PhoneNumber);
             return newCase.Id == 0 ? Result<CreateCaseResult>.SetError("Hubo un error intente nuevamente") : Result<CreateCaseResult>.SetOk(result);
         }
 

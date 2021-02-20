@@ -28,6 +28,9 @@ namespace TC.Functions.CapturedCases.Business
         public DbSet<CasosCaptados> CasosCaptados { get; set; }
 
         public DbSet<Parameter> Parameters { get; set; }
+
         public DbSet<SendNotification> SendNotifications { get; set; }
+
+        public DbSet<CapturedCase> CapturedCases { get; set; }
     }
 }

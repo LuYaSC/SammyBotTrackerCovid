@@ -75,6 +75,7 @@
     <Compile Include="AuditTypeEnum.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="BOL110.cs" />
+    <Compile Include="CapturedCase.cs" />
     <Compile Include="CasosAgenda.cs" />
     <Compile Include="CasosCaptados.cs" />
     <Compile Include="CasosGrupoRescate.cs" />

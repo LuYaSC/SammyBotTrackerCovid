@@ -53,5 +53,7 @@ namespace TC.Core.Data
 
         [ForeignKey("DoctorId")]
         public virtual User UserDoctor { get; set; }
+
+        public virtual CapturedCase CapturedCases { get; set; }
     }
 }

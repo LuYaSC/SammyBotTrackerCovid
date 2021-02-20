@@ -50,7 +50,6 @@ namespace CapturedCases.MicroService
                         .WithMethods("POST")
                         .AllowAnyHeader();
                 });
-
             });
         }
 
