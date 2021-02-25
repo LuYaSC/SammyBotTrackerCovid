@@ -25,6 +25,8 @@ namespace TC.Core.Data
 
         public string Municipality { get; set; }
 
+        public string Origin { get; set; }
+
         public virtual CasosAgenda CasosAgendas { get; set; }
     }
 }

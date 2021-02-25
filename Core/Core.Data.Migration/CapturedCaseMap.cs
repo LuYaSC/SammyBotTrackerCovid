@@ -15,6 +15,7 @@ namespace TC.Core.Data.Migration
             modelBuilder.Entity<CapturedCase>().Property(prop => prop.BornDate).HasColumnType("nvarchar").HasMaxLength(10);
             modelBuilder.Entity<CapturedCase>().Property(prop => prop.Departament).HasColumnType("nvarchar").HasMaxLength(30);
             modelBuilder.Entity<CapturedCase>().Property(prop => prop.Municipality).HasColumnType("nvarchar").HasMaxLength(30);
+            modelBuilder.Entity<CapturedCase>().Property(prop => prop.Origin).HasColumnType("nvarchar").HasMaxLength(50);
         }
     }
 }

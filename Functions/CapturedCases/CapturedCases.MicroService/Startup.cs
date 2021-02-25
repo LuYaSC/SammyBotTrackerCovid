@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TC.Connectors.BotWsp;
 using TC.Connectors.HealthInsurance;
+using TC.Connectors.IntHealthInsurance;
 using TC.Connectors.TwilioRooms;
 using TC.Core.AuthConfig.DotNetCore;
 using TC.Functions.CapturedCases.Business;
@@ -40,7 +41,7 @@ namespace CapturedCases.MicroService
                provider => provider.GetService<IHttpContextAccessor>().HttpContext.User);
             AuthConfig.Configure(services, Configuration);
             services.AddTransient<ITwilioRoomsManager>(_ => new TwilioRoomsManager(Configuration.GetSection("Connectors")["TwilioService"]));
-            services.AddTransient<IHealthInsuranceManager>(_ => new HealthInsuranceManager(Configuration.GetSection("Connectors")["HealthInsuranceService"]));
+            services.AddTransient<IManagerIntHeIn>(_ => new ManagerIntHeIn(Configuration.GetSection("Connectors")["HealthInsuranceService"]));
             services.AddTransient<IBotWspManager>(_ => new BotWspManager(Configuration.GetSection("Connectors")["BotWspService"]));
             services.AddCors(options =>
             {

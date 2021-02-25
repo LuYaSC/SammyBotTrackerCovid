@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 using TC.Connectors.BotWsp;
 using TC.Connectors.BotWsp.SendMessageWsp;
 using TC.Connectors.HealthInsurance;
@@ -17,6 +15,8 @@ using TC.Core.Business;
 using TC.Core.Data;
 using TC.Functions.CapturedCases.Business.Models;
 using TC.Core.AuthConfig;
+using TC.Connectors.IntHealthInsurance;
+using TC.Connectors.IntHealthInsurance.GetHealthIn;
 
 namespace TC.Functions.CapturedCases.Business
 {
@@ -30,14 +30,16 @@ namespace TC.Functions.CapturedCases.Business
         string urlRoom = string.Empty;
         string patientName = string.Empty;
         string doctorName = string.Empty;
+        string Origin;
         P_Pacientes patient = new P_Pacientes();
 
         //Connectors
         ITwilioRoomsManager serviceRooms;
-        IHealthInsuranceManager serviceInsurance;
+        //IHealthInsuranceManager serviceInsurance;
+        IManagerIntHeIn serviceInsurance;
         IBotWspManager serviceBot;
 
-        public CapturedCasesBusiness(CapturedCasesContext context, IPrincipal userInfo, IConfiguration configuration, ITwilioRoomsManager serviceRooms, IHealthInsuranceManager serviceInsurance,
+        public CapturedCasesBusiness(CapturedCasesContext context, IPrincipal userInfo, IConfiguration configuration, ITwilioRoomsManager serviceRooms, IManagerIntHeIn serviceInsurance,
             IBotWspManager serviceBot) : base(context, userInfo, configuration)
         {
             userId = UserInfo.Identity.GetUserId<int>();
@@ -76,9 +78,10 @@ namespace TC.Functions.CapturedCases.Business
                     .ForMember(d => d.CodigoSala, o => o.MapFrom(s => codeRoom))
                     .ForMember(d => d.UrlSala, o => o.MapFrom(s => urlRoom));
 
-                cfg.CreateMap<CreateCaseResult, CapturedCase>();
+                cfg.CreateMap<CreateCaseResult, CapturedCase>()
+                    .ForMember(d => d.Origin, o => o.MapFrom(s => Origin));
 
-                cfg.CreateMap<GetDataDto, GetInsurancePersonRequest>();
+                cfg.CreateMap<GetDataDto, GetHealthInRequest>();
 
                 cfg.CreateMap<CasosAgenda, PreviousAttention>()
                     .ForMember(d => d.CaseId, o => o.MapFrom(s => s.Id))
@@ -120,18 +123,25 @@ namespace TC.Functions.CapturedCases.Business
                 patient = Context.Save(mapper.Map<P_Pacientes>(dto));
             }
             //Validate Insurance
-            var personInsurance = serviceInsurance.GetInsurancePerson(mapper.Map<GetInsurancePersonRequest>(dto));
+            var personInsurance = serviceInsurance.GetInsurancePerson(mapper.Map<GetHealthInRequest>(dto));
             if (personInsurance.Header.IsOk)
             {
                 if (personInsurance.Body != null)
                 {
-                    result.IsInsurance = true;
-                    patientName = result.NamePatient = personInsurance.Body.Name;
-                    result.InsuranceName = personInsurance.Body.Insurance;
-                    result.Municipality = personInsurance.Body.Municipality;
-                    result.Departament = personInsurance.Body.Departament;
-                    result.BornDate = personInsurance.Body.BornDate;
+                    if (personInsurance.Body.IsOk)
+                    {
+                        if (personInsurance.Body.Body != null)
+                        {
+                            result.IsInsurance = true;
+                            patientName = result.NamePatient = personInsurance.Body.Body.name;
+                            result.InsuranceName = personInsurance.Body.Body.insurance;
+                            result.Municipality = personInsurance.Body.Body.municipality;
+                            result.Departament = personInsurance.Body.Body.departament;
+                            result.BornDate = personInsurance.Body.Body.bornDate;
+                        }
+                    }
                 }
+
             }
             //Get Dates Patient if exists
             if (!result.IsNewPatient)
@@ -152,6 +162,7 @@ namespace TC.Functions.CapturedCases.Business
             result.UrlRoom = urlRoom;
             var newCase = Context.Save(mapper.Map<CasosAgenda>(dto));
             result.CaseId = newCase.Id;
+            Origin = dto.Origin;
             newCase.CapturedCases = mapper.Map<CapturedCase>(result);
 
             //Notifiation Patient
@@ -170,7 +181,7 @@ namespace TC.Functions.CapturedCases.Business
         public Result<PreviousCaseResult> GetPreviousCase(PreviousCaseDto dto)
         {
             var prevCase = Context.CasosAgendas.Where(x => x.Id == dto.CaseId).FirstOrDefault();
-            return prevCase == null ? Result<PreviousCaseResult>.SetError("El caso no existe verifique porfavor") 
+            return prevCase == null ? Result<PreviousCaseResult>.SetError("El caso no existe verifique porfavor")
                 : Result<PreviousCaseResult>.SetOk(mapper.Map<PreviousCaseResult>(prevCase));
         }
 

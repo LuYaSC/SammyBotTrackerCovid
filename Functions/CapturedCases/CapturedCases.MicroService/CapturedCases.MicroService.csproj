@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Connectors\Connectors.BotWsp\Connectors.BotWsp.csproj" />
     <ProjectReference Include="..\..\..\Connectors\Connectors.HealthInsurance\Connectors.HealthInsurance.csproj" />
+    <ProjectReference Include="..\..\..\Connectors\Connectors.IntHealthInsurance\Connectors.IntHealthInsurance.csproj" />
     <ProjectReference Include="..\..\..\Connectors\Connectors.TwilioRooms\Connectors.TwilioRooms.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.AuthConfig.DotNetCore\Core.AuthConfig.DotNetCore.csproj" />
     <ProjectReference Include="..\..\..\Core\Core.MicroService\Core.MicroService.csproj" />

@@ -153,6 +153,10 @@
     <Compile Include="Migrations\202102200523253_ChangesCapturedCases.Designer.cs">
       <DependentUpon>202102200523253_ChangesCapturedCases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102230321200_AddingFieldOriginCapturedCases.cs" />
+    <Compile Include="Migrations\202102230321200_AddingFieldOriginCapturedCases.Designer.cs">
+      <DependentUpon>202102230321200_AddingFieldOriginCapturedCases.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NivelesAlertaMap.cs" />
     <Compile Include="PacienteMap.cs" />
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102200523253_ChangesCapturedCases.resx">
       <DependentUpon>202102200523253_ChangesCapturedCases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102230321200_AddingFieldOriginCapturedCases.resx">
+      <DependentUpon>202102230321200_AddingFieldOriginCapturedCases.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
